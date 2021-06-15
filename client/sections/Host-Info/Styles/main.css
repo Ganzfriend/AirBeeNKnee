@@ -104,7 +104,7 @@ hr {
   left: 81%;
 }
 
-button {
+.host-button {
   margin: 0 0 20px 0;
   background-color: white;
   border: 1px solid black;
@@ -116,12 +116,12 @@ button {
   outline: none ;
 }
 
-button:hover {
+.host-button:hover {
   background-color: rgb(245, 243, 243);
   cursor: pointer;
 }
 
-#loc-overlay button {
+#loc-overlay .host-button {
   border: 1px solid white;
   padding: 0;
   font-size: 25px;
@@ -271,14 +271,14 @@ a svg {
   height: 40px;
 }
 
-#close-modal button {
+#close-modal .host-button {
   border: 1px solid white;
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 
-button svg {
+.host-button svg {
   margin-left: -9px;
 }
 

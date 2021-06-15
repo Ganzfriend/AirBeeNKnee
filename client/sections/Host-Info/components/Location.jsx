@@ -62,6 +62,7 @@ const Location = () => {
       <button
         id='open-loc-modal'
         type='button'
+        className="host-button"
         onClick={() => setIsShown(true)}
       >
         More about the location
@@ -77,6 +78,7 @@ const Location = () => {
         <Modal.Body>
           <div id='loc-overlay'>
             <button
+              className="host-button"
               id='close-loc-modal'
               type='button'
               onClick={() => setIsShown(false)}

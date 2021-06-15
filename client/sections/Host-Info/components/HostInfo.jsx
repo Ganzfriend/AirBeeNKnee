@@ -118,7 +118,7 @@ const HostInfo = () => {
               {`Response time: ${response.time}`}
             </div>
             <br />
-            <button type='button' onClick={() => setShowModal(true)}>Contact host</button>
+            <button className="host-button" type='button' onClick={() => setShowModal(true)}>Contact host</button>
             <div>
               <SecurityIcon style={{ color: 'blue', display: 'inline-block' }} />
               <div id='prot-warning'>
@@ -202,11 +202,11 @@ const HostInfo = () => {
                     Looks good!
                   </Feedback>
                 </Group>
-                <Button type='submit'>Send message</Button>
+                <Button className="host-button" type='submit'>Send message</Button>
               </Form>
             </Body>
             <Footer>
-              <Button variant='secondary' onClick={resetState}>Close</Button>
+              <Button className="host-button" variant='secondary' onClick={resetState}>Close</Button>
             </Footer>
           </Modal>
         </div>
