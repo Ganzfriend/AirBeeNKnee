@@ -1,7 +1,8 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
-import RApp from './RApp';
+
+import RApp from './RApp.jsx';
 
 // TODO refactor this back to a functional component
 class Router extends React.Component {

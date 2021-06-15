@@ -1,12 +1,9 @@
-/* eslint-disable arrow-parens */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable import/extensions */
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import styles from '../styles.js';
+
+import styles from './styles.js';
 
 const useStyles = makeStyles(styles);
 

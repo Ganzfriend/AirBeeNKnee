@@ -1,13 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
+const SRC_DIR = path.join(__dirname, 'client/index.js');
+const OUT_DIR = path.join(__dirname, 'dist');
 
-const config = {
-  entry: [
-    './client/src/index.jsx',
-  ],
+module.exports = {
+  entry: SRC_DIR,
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: OUT_DIR,
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -30,11 +30,7 @@ const config = {
         use: 'url-loader?limit=100000',
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
-        use: 'file-loader',
-      },
-      {
-        test: /\.(eot|ttf)$/,
+        test: /\.(eot|ttf|png|jpg|jpeg|gif|svg|woff|woff2)$/,
         use: 'file-loader',
       },
       {
@@ -48,21 +44,7 @@ const config = {
       },
     ],
   },
-  resolve: {
-    extensions: [
-      '.js',
-      '.jsx',
-    ],
-    modules: [
-      'node_modules',
-      'bower_components',
-      'shared',
-      '/shared/vendor/modules',
-    ],
-  },
-  devServer: {
-    contentBase: './dist',
-  },
+  externals: {
+    jquery: "jQuery"
+  }
 };
-
-module.exports = config;

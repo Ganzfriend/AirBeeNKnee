@@ -1,13 +1,13 @@
-/* eslint-disable import/extensions */
 import React, { useState, useEffect } from 'react';
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import { useParams } from 'react-router-dom';
-import Places from './Places';
-import Activities from './Activities';
-import CityList from './CityList';
-import CardSkeletons from './CardSkeletons';
-import CityListSkeletons from './CityListSkeletons';
+
+import Places from './Places.jsx';
+import Activities from './Activities.jsx';
+import CityList from './CityList.jsx';
+import CardSkeletons from './CardSkeletons.jsx';
+import CityListSkeletons from './CityListSkeletons.jsx';
 import styles from '../styles.js';
 
 const axios = require('axios');

@@ -1,9 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable arrow-parens */
-/* eslint-disable import/extensions */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable react/prop-types */
-/* eslint-disable-next-line import/extensions */
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -14,8 +8,9 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import FavoriteTwoToneIcon from '@material-ui/icons/FavoriteTwoTone';
-import MouseOverPopover from './MouseOverPopover';
-import styles from '../styles.js';
+
+import MouseOverPopover from './MouseOverPopover.jsx';
+import styles from './styles.js';
 
 const axios = require('axios');
 

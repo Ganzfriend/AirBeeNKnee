@@ -1,9 +1,9 @@
-/* eslint-disable import/extensions */
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { makeStyles } from '@material-ui/core/styles';
-import styles from '../styles.js';
+
+import styles from './styles.js';
 
 const useStyles = makeStyles(styles);
 

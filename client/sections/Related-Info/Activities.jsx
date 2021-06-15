@@ -1,11 +1,3 @@
-/* eslint-disable arrow-parens */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable import/extensions */
-/* eslint-disable no-console */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable-next-line import/extensions */
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Carousel from 'react-multi-carousel';
@@ -14,8 +6,9 @@ import Box from '@material-ui/core/Box';
 import { IconButton } from '@material-ui/core';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import ActivityCard from './ActivityCard';
-import styles from '../styles.js';
+
+import ActivityCard from './ActivityCard.jsx';
+import styles from './styles.js';
 
 const useStyles = makeStyles(styles);
 
