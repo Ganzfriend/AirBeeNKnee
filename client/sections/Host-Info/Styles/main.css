@@ -41,11 +41,11 @@ hr {
 
 #wrapper #map {
   height: 500px;
-  max-width: none !important;
+  max-width: none ;
 }
 
 .gm-bundled-control div {
-  border-radius: 8px !important;
+  border-radius: 8px ;
 }
 
 .loc-notice, .sel-transit {
@@ -113,7 +113,7 @@ button {
   font-family: 'Airbnb Cereal App Medium';
   padding: 10px 18px 10px 18px;
   font-size: 16px;
-  outline: none !important;
+  outline: none ;
 }
 
 button:hover {
@@ -302,5 +302,5 @@ button svg {
 }
 
 .loc-modal .modal-content {
-  border-radius: 0% !important;
+  border-radius: 0% ;
 }

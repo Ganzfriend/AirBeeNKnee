@@ -21,7 +21,7 @@
 
 #reviews-body {
   font-family: 'Airbnb Cereal App Light';
-  margin: 10px 10% 0 10% !important;
+  margin: 10px 10% 0 10% ;
 }
 
 #opt-btn {
@@ -88,7 +88,7 @@
 }
 
 #cat-progress-bar .progress {
-  height: 4px !important;
+  height: 4px ;
   width: 140px;
   position: absolute;
 }
@@ -115,8 +115,8 @@
 
 #button-num {
   display: inline-block;
-  font-family: 'Airbnb Cereal App Book' !important;
-  font-size: 14px !important;
+  font-family: 'Airbnb Cereal App Book' ;
+  font-size: 14px ;
 }
 
 #reviews-container {
@@ -222,7 +222,7 @@
 }
 
 #rvw-mdl-bars .progress {
-  height: 4px !important;
+  height: 4px ;
   width: 140px;
   margin-top: 26px;
 }
@@ -235,7 +235,7 @@
 
 #rvw-srch-box {
   background-color:  rgb(240, 240, 240);
-  box-shadow: none !important;
+  box-shadow: none ;
 }
 
 #rvw-mdl-reviews {
