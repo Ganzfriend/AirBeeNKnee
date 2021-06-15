@@ -56,7 +56,8 @@
     "react-transition-group": "^4.4.2",
     "regenerator-runtime": "^0.13.7",
     "underscore": "^1.13.1",
-    "url": "^0.11.0"
+    "url": "^0.11.0",
+    "node":"^16.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
