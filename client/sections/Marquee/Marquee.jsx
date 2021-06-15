@@ -30,6 +30,7 @@ const Marquee = () => {
 
   return (
     <div className="marquee-app">
+      {displayRecord ? (
       <Title listing={displayRecord} />
       <PhotoGrid listing={displayRecord} />
       <Divider />
@@ -40,6 +41,9 @@ const Marquee = () => {
       <Sleeping listing={displayRecord} />
       <Divider />
       <Amenities listing={displayRecord} />
+      )
+      : <div></div>
+      }
     </div>
   );
 };
