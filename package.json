@@ -100,5 +100,16 @@
     "coveragePathIgnorePatterns": [
       "<rootDir>/client/sections/Host-Info/gMap.js"
     ]
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
   }
 }
