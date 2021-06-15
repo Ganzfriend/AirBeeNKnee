@@ -31,16 +31,18 @@ const Marquee = () => {
   return (
     <div className="marquee-app">
       {displayRecord ? (
-      <Title listing={displayRecord} />
-      <PhotoGrid listing={displayRecord} />
-      <Divider />
-      <Policies listing={displayRecord} />
-      <Divider />
-      <Description listing={displayRecord} />
-      <Divider />
-      <Sleeping listing={displayRecord} />
-      <Divider />
-      <Amenities listing={displayRecord} />
+      <div>
+        <Title listing={displayRecord} />
+        <PhotoGrid listing={displayRecord} />
+        <Divider />
+        <Policies listing={displayRecord} />
+        <Divider />
+        <Description listing={displayRecord} />
+        <Divider />
+        <Sleeping listing={displayRecord} />
+        <Divider />
+        <Amenities listing={displayRecord} />
+      </div>
       )
       : <div></div>
       }
