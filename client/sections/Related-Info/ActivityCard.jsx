@@ -21,7 +21,7 @@ const ActivityCard = ({ activity }) => {
   const [liked, setLiked] = useState(false);
   const classes = useStyles();
 
-  useEffect(() => setLiked(activity.liked), [activity.liked]);
+  useEffect(() => { setLiked(activity.liked) }, [activity.liked]);
 
   const handleHeartClick = (clickedActivityId) => {
     const newLiked = !liked;

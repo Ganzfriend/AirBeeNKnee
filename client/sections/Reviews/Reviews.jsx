@@ -15,7 +15,7 @@ const Reviews = ({id = 1}) => {
       .catch(err => console.log(err));
   };
 
-  useEffect(() => getReviews());
+  useEffect(() => {getReviews()}, []);
 
   return (
       <div id="reviews-body">
