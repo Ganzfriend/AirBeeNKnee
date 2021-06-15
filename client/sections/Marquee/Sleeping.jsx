@@ -3,7 +3,7 @@ import './fashion.css';
 
 const Sleeping = ({ listing }) => {
   const { bedrooms } = listing;
-  if (listing === null) {
+  if (!listing) {
     return null;
   }
   let roomNum = 1;

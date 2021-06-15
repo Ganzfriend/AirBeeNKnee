@@ -7,7 +7,7 @@ const OBJECT_URL = 'https://destinationcapstone.sfo2.digitaloceanspaces.com/';
 const PhotoGrid = ({ listing }) => {
   const { pictures } = listing;
   let photosList = [];
-  if (listing === null) {
+  if (!listing) {
     for (let i = 0; i < 5; i++) {
       photosList[i] = (<Skeleton variant="rect" />);
     }

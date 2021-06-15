@@ -9,8 +9,6 @@ import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 
 const Amenities = ({ listing }) => {
   const { amenities } = listing;
-  // for a refactor, maybe put this object in
-  // another file and import.
   const amenitiesLookup = {
     hottub: (<h4>
       <HotTubIcon />
@@ -42,7 +40,7 @@ const Amenities = ({ listing }) => {
     </h4>),
   };
 
-  if (listing === null) {
+  if (!listing) {
     return null;
   }
   return (

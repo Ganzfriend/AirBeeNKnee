@@ -23,7 +23,7 @@ const Description = ({ listing }) => {
     </div>
   );
 
-  if (listing === null) {
+  if (!listing) {
     return null;
   }
   return (

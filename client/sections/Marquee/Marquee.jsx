@@ -11,7 +11,7 @@ import './fashion.css';
 const axios = require('axios');
 
 const Marquee = () => {
-  const [displayRecord, setDisplayRecord] = useState(null);
+  const [displayRecord, setDisplayRecord] = useState({});
 
   const getListingFromServer = (_id = 'random') => {
     axios.get(`/api/listing/${_id}`)
@@ -25,7 +25,7 @@ const Marquee = () => {
   };
 
   useEffect(() => {
-    getListingFromServer(1);
+    getListingFromServer();
   }, []);
 
   return (
