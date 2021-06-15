@@ -1,12 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
-const SRC_DIR = path.join(__dirname, 'client/index.js');
-const OUT_DIR = path.join(__dirname, 'dist');
 
 module.exports = {
-  entry: SRC_DIR,
+  entry: './client/index.js',
   output: {
-    path: OUT_DIR,
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {
