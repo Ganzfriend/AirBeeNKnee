@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'Airbnb Cereal App Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Airbnb Cereal App Book'), url('AirbnbCerealBook.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Airbnb Cereal App Light'), url('AirbnbCerealLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Airbnb Cereal App Medium'), url('AirbnbCerealMedium.woff') format('woff');
+}
+
+#reviews-body {
+  font-family: 'Airbnb Cereal App Light';
+  margin: 10px 10% 0 10% !important;
+}
+
+#opt-btn {
+  margin: 0 0 20px 10px;
+  background-color: white;
+  border: 1px solid rgb(168, 168, 168);
+  border-radius: 20px;
+  padding: 0 15px 0 15px;
+  height: 30px;
+  font-size: 13px;
+  outline: none;
+}
+
+#opt-btn:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+
+.reviews-card{
+  background-color: rgb(235, 228, 247);
+  border:1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.reviews-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#reviews-title {
+  display: inline-block;
+  margin-left: 5px;
+  font-family: 'Airbnb Cereal App Medium';
+  font-size: 20px;
+  vertical-align: -4px;
+}
+
+#rvws-star {
+  color: red;
+  font-size: 22px;
+}
+
+#reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cat-name {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+#cat-progress-bar {
+  display: table;
+  position: relative;
+
+}
+
+#cat-progress-bar .progress {
+  height: 4px !important;
+  width: 140px;
+  position: absolute;
+}
+
+#cat-progress-bar .progress {
+  top: -2.3vw;
+  left: 25vw
+}
+
+#cat-progress-bar .progress-bar, #rvw-mdl-bars .progress-bar {
+  background-color: black;
+}
+
+#progress-count, #rvw-mdl-bar-rtg {
+  display: table-cell;
+  padding-left: 20px;
+  position: absolute;
+}
+
+#progress-count {
+  top: -3vw;
+  left: 35.5vw;
+}
+
+#button-num {
+  display: inline-block;
+  font-family: 'Airbnb Cereal App Book' !important;
+  font-size: 14px !important;
+}
+
+#reviews-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.reviewer-title-bar img {
+  height: 70px;
+  width: 70px;
+  border: 0 solid white;
+  border-radius: 50%;
+}
+
+#reviewer-title-info {
+  display: inline-block;
+  height: 70px;
+  vertical-align: -12px;
+  margin-left: 15px;
+}
+
+#review-title-name {
+  font-size: 16px;
+  font-family: 'Airbnb Cereal App Medium';
+}
+
+#review-title-join {
+  color:rgb(168, 168, 168)
+}
+
+#review-body {
+  margin-right: 40px;
+}
+
+#show-revs-btn {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 7px;
+  padding: 8px 13px 8px 13px;
+  font-size: 15px;
+  font-family: 'Airbnb Cereal app Medium';
+  outline: none;
+}
+
+#show-revs-btn:hover {
+  background-color: rgb(240, 240, 240)
+}
+
+.rvw-modal {
+  width: 85vw;
+  max-width: 85vw;
+}
+.rvw-modal .modal-content {
+  border-radius: 13px;
+}
+
+#rvw-mdl-close button {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  outline: none;
+}
+
+#rvw-mdl-close button:hover {
+  background-color: rgb(240, 240, 240)
+}
+
+#rvw-mdl-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.modal-content #rvws-star {
+  color: red;
+  font-size: 35px;
+}
+
+.modal-content #reviews-title {
+  font-size: 30px;
+  position: absolute;
+}
+
+#rvw-mdl-bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 50px;
+}
+
+#rvw-mdl-cat div, #rvw-mdl-bars {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#rvw-mdl-progress {
+  display: inline-block;
+}
+
+#rvw-mdl-bar-rtg {
+  margin-left: 13%;
+}
+
+#rvw-mdl-bars .progress {
+  height: 4px !important;
+  width: 140px;
+  margin-top: 26px;
+}
+
+#rvw-modal-srch {
+  top: 6%;
+  border: 0px solid white;
+  border-radius: 25%;
+}
+
+#rvw-srch-box {
+  background-color:  rgb(240, 240, 240);
+  box-shadow: none !important;
+}
+
+#rvw-mdl-reviews {
+  margin-top: 10px;
+  padding: 60px;
+  max-height: 450px;
+  overflow: scroll;
+}

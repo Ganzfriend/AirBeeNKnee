@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const { allListings, listingWithId } = require('../database/Marquee/queries.js');
 const { Hosts, Locations, ToKnow } = require('../database/Host-Info/index.js');
+const { Review, Rating } = require('../database/Review/Review.js');
 const { City, Home, Activity } = require('../database/Related-Info/index.js');
 
 
@@ -113,6 +114,20 @@ app.put('/email/:id', async (req, res) => {
   } catch (err) {
     res.status(404).send(err);
   }
+});
+
+/* REVIEWS */
+
+app.get('/review/', (req, res) => {
+  Review.find({})
+    .then(data => res.send(data))
+    .catch(err => console.log(err));
+});
+
+app.get('/rating/:id', (req, res) => {
+  Rating.findOne({id: req.params.id})
+    .then(data => res.send(data))
+    .catch(err => console.log(err));
 });
 
 /* RELATED INFO */
