@@ -20,11 +20,15 @@ const PhotoGrid = ({ listing }) => {
 
   return (
     <div className="photo-grid">
-      <img alt="" className="main-photo-item" src={photosList[0]} />
-      <img alt="" className="photo-item item-a" src={photosList[1]} />
-      <img alt="" className="photo-item item-b" src={photosList[2]} />
-      <img alt="" className="photo-item item-c" src={photosList[3]} />
-      <img alt="" className="photo-item item-d" src={photosList[4]} />
+      {!!photosList.length && (
+        <div>
+          <img alt="" className="main-photo-item" src={photosList[0]} />
+          <img alt="" className="photo-item item-a" src={photosList[1]} />
+          <img alt="" className="photo-item item-b" src={photosList[2]} />
+          <img alt="" className="photo-item item-c" src={photosList[3]} />
+          <img alt="" className="photo-item item-d" src={photosList[4]} />
+        </div>
+      )}
     </div>
   );
 };
