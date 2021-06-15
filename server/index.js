@@ -4,7 +4,7 @@ const cors = require('cors');
 
 const { allListings, listingWithId } = require('../database/Marquee/queries.js');
 const { Hosts, Locations, ToKnow } = require('../database/Host-Info/index.js');
-const { Review, Rating } = require('../database/Review/Review.js');
+const { Review, Rating } = require('../database/Reviews/Review.js');
 const { City, Home, Activity } = require('../database/Related-Info/index.js');
 
 
