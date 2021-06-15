@@ -17,7 +17,6 @@
     "@material-ui/lab": "4.0.0-alpha.57",
     "@testing-library/user-event": "github:testing-library/user-event",
     "axios": "^0.21.1",
-    "babel-loader": "^8.2.2",
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
     "enquire.js": "^2.1.6",
@@ -40,7 +39,15 @@
     "react-router-dom": "^5.2.0",
     "react-test-renderer": "^17.0.1",
     "react-transition-group": "^4.4.1",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.7",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "chai": "^4.2.0",
+    "enzyme": "^3.11.0",
+    "google-maps": "^4.3.3",
+    "http-proxy-middleware": "^1.0.6",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
@@ -67,6 +74,40 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.13.0",
     "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
+    "webpack-dev-server": "^3.11.1",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "babel-loader": "^8.2.2",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "mocha": "^8.2.1",
+    "supertest": "^6.1.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/client/sections/Host-Info/gMap.js"
+    ]
   }
 }
