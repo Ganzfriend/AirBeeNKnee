@@ -10,7 +10,7 @@ const Sleeping = ({ listing }) => {
   return (
     <div>
       <h2>Sleeping arrangements</h2>
-      {bedrooms.map((bedroom) => (
+      {bedrooms?.map((bedroom) => (
         <div className="marquee-sleeping-span">
           <h3>
             Bedroom

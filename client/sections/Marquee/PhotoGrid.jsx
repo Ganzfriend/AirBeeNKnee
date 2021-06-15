@@ -13,7 +13,7 @@ const PhotoGrid = ({ listing }) => {
     }
   } else {
     // if not null, should mean we have a displayRecord to pull from
-    photosList = pictures.map((imgName) =>
+    photosList = pictures?.map((imgName) =>
       // hardcoded for jpg
       `${OBJECT_URL}${imgName}.jpg`);
   }

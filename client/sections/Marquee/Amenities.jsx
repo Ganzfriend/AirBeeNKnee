@@ -45,7 +45,7 @@ const Amenities = ({ listing }) => {
   }
   return (
     <div>
-      {amenities.map((amen) => amenitiesLookup[amen])}
+      {amenities?.map((amen) => amenitiesLookup[amen])}
     </div>
   );
 };

@@ -29,7 +29,7 @@ const Description = ({ listing }) => {
   return (
     <div>
       <p>
-        {description.substr(0, 200)}
+        {description?.substr(0, 200)}
         ...
         <span onClick={handleOpen}>read more</span>
       </p>
