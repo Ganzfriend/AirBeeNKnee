@@ -2,16 +2,75 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 
+const { allListings, listingWithId } = require('../database/Marquee/queries.js');
 const { Hosts, Locations, ToKnow } = require('../database/Host-Info/index.js');
 const { City, Home, Activity } = require('../database/Related-Info/index.js');
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
+app.use('/listing', express.static(path.join(__dirname, '..', 'dist')));
+app.use('/listing/*', express.static(path.join(__dirname, '..', 'dist')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+/* MARQUEE */
+
+app.get('/', (req, res) => {
+  res.status(200).send('Server Firing');
+});
+
+app.get('/api/listing/all', (req, res) => {
+  console.log('get all listings');
+  allListings()
+    .then((records) => {
+      if (records.length > 0) {
+        res.status(200).send(records);
+      } else {
+        // no records to be had, send no content message
+        res.status(204).send();
+      }
+    })
+    .catch((err) => {
+      res.status(500).send('Error fetching listings from database: ', err);
+    });
+});
+
+app.get('/api/listing/random', (req, res) => {
+  console.log('get random listing');
+  allListings()
+    .then((records) => {
+      if (records.length > 0) {
+        const myRecord = records[Math.floor(Math.random() * records.length)];
+        res.send(myRecord);
+      } else {
+        // no records to be had, send no content message
+        res.status(204).send();
+      }
+    })
+    .catch((err) => {
+      res.status(500).send('Error fetching listings from database: ', err);
+    });
+});
+
+// TODO - make a param, for testing Dosh, we are just doing one for pictures
+app.get('/api/listing/:listingId', (req, res) => {
+  console.log('get specified listing: ', req.params.listingId);
+  listingWithId(req.params.listingId)
+    .then((record) => {
+      if (record) {
+        res.status(200).send(record);
+      } else {
+        res.status(404).send('Cannot find listing with id: ', req.params.listingId);
+      }
+    })
+    .catch((err) => {
+      res.status(500).send('Error fetching listing from database: ', err);
+    });
+});
 
 /* HOST INFO */
 
