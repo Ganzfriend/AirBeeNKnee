@@ -5,7 +5,7 @@ import Marquee from './sections/Marquee/Marquee.jsx';
 import HostInfo from './sections/Host-Info/components/HostInfo.jsx';
 import Reviews from './sections/Reviews/Reviews.jsx';
 import RelatedInfo from './sections/Related-Info/RelatedInfo.jsx';
-import styles from './style.js';
+import styles from './styles.js';
 
 const useStyles = makeStyles(styles);
 
