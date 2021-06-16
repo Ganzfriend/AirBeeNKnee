@@ -54,14 +54,16 @@ const PhotoGrid = ({ listing }) => {
   );
 
   return (
-    <div className={classes.photoGrid}>
+    <div className={classes.photoBox}>
       {!!photosList?.length && (
         <div>
           <img alt="" className={classes.mainPhotoItem} src={photosList[0]} />
-          <img alt="" className={classes.photoItem, classes.itemA} src={photosList[1]} />
-          <img alt="" className={classes.photoItem, classes.itemB} src={photosList[2]} />
-          <img alt="" className={classes.photoItem, classes.itemC} src={photosList[3]} />
-          <img alt="" className={classes.photoItem, classes.itemD} src={photosList[4]} />
+          <div className={classes.photoGrid}>
+            <img alt="" className={classes.photoItem, classes.itemA} src={photosList[1]} />
+            <img alt="" className={classes.photoItem, classes.itemB} src={photosList[2]} />
+            <img alt="" className={classes.photoItem, classes.itemC} src={photosList[3]} />
+            <img alt="" className={classes.photoItem, classes.itemD} src={photosList[4]} />
+          </div>
           <button className={classes.photoButton} onClick={handleOpen}> Show all photos </button>
           <Modal open={open} onClose={handleClose}>
             {modalBody}

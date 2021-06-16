@@ -38,12 +38,17 @@ const styles = () => ({
   marqueeSubmodulesDiv: {
     width: 600,
   },
+  photoBox: {
+    display: "flex",
+  },
   photoGrid: {
     display: "grid",
     // gridTemplateColumns: "250px 250px 250px 250px",
-    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    gridTemplateColumns: "1fr 1fr",
     // gridTemplateRows: "250px 250px",
     gridTemplateRows: "1fr 1fr",
+    width: "100vw",
+    height: "100vh",
   },
   photoItem: {
     margin: 5,
