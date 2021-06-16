@@ -115,7 +115,7 @@ const sampleRating = [
     id: [5, 6, 7]
   },
   {
-    hostName: 'Jon Lasley',
+    hostName: 'R.B. Ginsburg',
     starReview: {
       1: 0,
       2: 1,
@@ -265,7 +265,7 @@ const sampleReview = [
     }
   },
   {
-    host: 'Jon Lasley',
+    host: 'R.B. Ginsburg',
     review: {
       name: 'Patrick ',
       body: 'What a lovely host and amazing home! His response time was very fast, what a quick typer!'

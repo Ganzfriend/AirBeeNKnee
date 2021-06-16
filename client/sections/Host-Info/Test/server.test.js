@@ -40,7 +40,7 @@ describe('server endpoints', () => {
     test('should return specific data', async (done) => {
       const res = await req(`/hostInfo/${endpoint}`);
       expect(res.body).not.toBeNull();
-      expect(res.body.name).toBe('Jon Lasley');
+      expect(res.body.name).toBe('R.B. Ginsburg');
       done();
     });
 

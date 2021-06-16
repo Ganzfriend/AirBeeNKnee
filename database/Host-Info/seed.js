@@ -74,7 +74,7 @@ const hosts = [
     messages: [],
   },
   {
-    name: 'Jon Lasley',
+    name: 'R.B. Ginsburg',
     verified: false,
     photo: 'https://fechostinfo.s3-us-west-1.amazonaws.com/JonLasley',
     joinDate: 'Mon Jan 1 2018 12:00:00 GMT-0600 (Mountain Daylight Time)',
@@ -180,7 +180,7 @@ const otherToKnows = ['Jabroni, it\'s the Rock cave', 'Cabin near seattle, the g
 
 const toKnow = [
   {
-    name: 'Hollywood lifeStyle of luxury! Manion for a star',
+    name: 'Hollywood lifestyle of luxury! Mansion for a star',
     rules: {
       house: ['Self check-in with lockbox', 'Not suitable for children and infants', 'No pets', 'No smoking', 'Only 4 visitors'],
       additional: ['No Film Productions Without Permission', 'No jumping off the balcony into the pool', 'No loud music after 2:00 AM'],
