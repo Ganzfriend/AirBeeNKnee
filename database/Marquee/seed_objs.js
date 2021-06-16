@@ -1,5 +1,5 @@
 exports.descriptionBag = [
-  'Think of London, a small city. Dark, dark in the daytime \
+  "Think of London, a small city. Dark, dark in the daytime \
     People sleep, sleep in the daytime If they want to, if they want to \
     Im checking them out Im checking them out Ive got it figured out Im the one thats got it figured out  Theres good points some bad points \
     It all works out Im just a little freaked out \
@@ -14,7 +14,7 @@ exports.descriptionBag = [
     I will find a city find myself a city to live in \
     Did I forget to mention, to forget mention Memphis? \
     Home of Elvis and the ancient Greeks Do I smell? I smell home cooking \
-    Its only the river, its only the river', // -----------
+    Its only the river, its only the river", // -----------
   "Echoes of reggae comin' through my bedroom wall \
     Having a party up next door but I'm sittin here all alone \
     Two lovers in the bedroom and the other starts to shout \
@@ -25,7 +25,7 @@ exports.descriptionBag = [
     He's seen his name on the marquee but she will never understand \
     Once again he's leavin' and she's there with a tear in her eye \
     Embraces with a warm gesture it's time, time to say goodbye \
-    Destination unknown Ruby Ruby Ruby Ruby Soho \ Destination unknown \
+    Destination unknown Ruby Ruby Ruby Ruby Soho  Destination unknown \
     Ruby Ruby Ruby Ruby Soho", // -----------------
   "And you may find yourself living in a shotgun shack \
 And you may find yourself in another part of the world \
@@ -69,92 +69,105 @@ I'm walking a line Divide and dissolve",
 ];
 
 exports.amenitiesBag = [
-  'hottub',
-  'kitchen',
-  'wifi',
-  'coffee',
-  'tv',
-  'fireplace',
-  'gym',
+  "hottub",
+  "kitchen",
+  "wifi",
+  "coffee",
+  "tv",
+  "fireplace",
+  "gym",
 ];
 
 exports.bedroomsBag = [
-  '1 king bed',
-  '2 queen beds',
-  '2 twin bunk beds',
-  '1 couch',
-  '1 queen bed',
-  '1 tasteful army cot',
+  "1 king bed",
+  "2 queen beds",
+  "2 twin bunk beds",
+  "1 couch",
+  "1 queen bed",
+  "1 tasteful army cot",
 ];
 
 exports.locationBag = [
-  'Seattle, WA',
-  'Austin, TX',
-  'Hollywood, CA',
-  'Oakland, CA',
+  "Seattle, WA",
+  "Austin, TX",
+  "Hollywood, CA",
+  "Oakland, CA",
 ];
 
 exports.firstNameBag = [
-  'Nikola',
-  'Rick',
-  'Liz',
-  'Amanda',
-  'Hermann',
-  'Scott',
-  'Woody',
+  "Nikola",
+  "Rick",
+  "Liz",
+  "Amanda",
+  "Hermann",
+  "Scott",
+  "Woody",
 ];
 
-exports.lastNameBag = [
-  'Suzuki',
-  'Hesse',
-  'Weir',
-  'Garcia',
-];
+exports.lastNameBag = ["Suzuki", "Hesse", "Weir", "Garcia"];
 
 exports.firstTitleBag = [
-  'Scenic',
-  'Passable',
-  'Haunted',
-  'Modern',
-  'Three-Story',
-  'Charming',
+  "Scenic",
+  "Passable",
+  "Haunted",
+  "Modern",
+  "Three-Story",
+  "Charming",
 ];
 
 exports.secondTitleBag = [
-  'Riverside',
-  'Mountain',
-  'Swamp',
-  'Underground',
-  'Beach-Access',
+  "Riverside",
+  "Mountain",
+  "Swamp",
+  "Underground",
+  "Beach-Access",
 ];
 
 exports.thirdTitleBag = [
-  'Shack',
-  'Hovel',
-  'Villa',
-  'Chateau',
-  'Castle',
-  'Bungalow',
+  "Shack",
+  "Hovel",
+  "Villa",
+  "Chateau",
+  "Castle",
+  "Bungalow",
 ];
 
 exports.pictureBag = [
-  'interior1',
-  'interior2',
-  'interior3',
-  'interior4',
-  'interior5',
-  'interior6',
-  'interior7',
-  'interior8',
-  'interior9',
-  'interior10',
-  'interior11',
-  'exterior1',
-  'exterior2',
-  'exterior3',
-  'exterior4',
-  'exterior5',
-  'exterior6',
-  'exterior7',
-  'exterior8',
+  "interior1",
+  "interior2",
+  "interior3",
+  "interior4",
+  "interior5",
+  "interior6",
+  "interior7",
+  "interior8",
+  "interior9",
+  "interior10",
+  "interior11",
+  "exterior1",
+  "exterior2",
+  "exterior3",
+  "exterior4",
+  "exterior5",
+  "exterior6",
+  "exterior7",
+  "exterior8",
+];
+
+exports.policiesBag = [
+  {
+    title: "Entire home",
+    description: "You'll have the house to yourself",
+    icon: "house",
+  },
+  {
+    title: "Enhanced Clean",
+    description: "This host committed to Airbnb's enhanced cleaning process",
+    icon: "clean",
+  },
+  {
+    title: "House rules",
+    description: "Parties only",
+    icon: "rules",
+  },
 ];
