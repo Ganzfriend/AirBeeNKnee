@@ -7,6 +7,9 @@ import ReportProblemIcon from '@material-ui/icons/ReportProblem';
 import SecurityIcon from '@material-ui/icons/Security';
 import { Modal, Button, Form } from 'react-bootstrap';
 
+import Location from './Location.jsx';
+import ToKnow from './ToKnow.jsx';
+
 const HostInfo = () => {
   const [showMore, setShowMore] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -76,7 +79,8 @@ const HostInfo = () => {
 
   return !host.name ? <div />
     : (
-      <div>
+      <div className="body">
+        <Location />
         <div id='host-bar'>
           <img src={photo} alt='' id='host-img' />
           <div id='host-bar-info' style={{ display: 'inline-block' }}>
@@ -211,6 +215,7 @@ const HostInfo = () => {
           </Modal>
         </div>
         <hr />
+        <ToKnow />
       </div>
     );
 };

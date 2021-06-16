@@ -19,7 +19,7 @@
   src: local('Airbnb Cereal App Medium'), url('AirbnbCerealMedium.woff') format('woff');
 }
 
-body {
+.body {
   font-family: 'Airbnb Cereal App Light';
   margin: 10px 15% 0 15%;
 }

@@ -36,8 +36,8 @@ const Marquee = () => {
         <Title listing={displayRecord} />
         <PhotoGrid listing={displayRecord} />
         <Divider />
-        <Policies listing={displayRecord} />
-        <Divider />
+        {/* <Policies listing={displayRecord} /> */}
+        {/* <Divider /> */}
         <Description listing={displayRecord} />
         <Divider />
         <Sleeping listing={displayRecord} />
