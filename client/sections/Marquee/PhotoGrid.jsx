@@ -57,7 +57,7 @@ const PhotoGrid = ({ listing }) => {
     <div className={classes.photoGrid}>
       {!!photosList?.length && (
         <div>
-          <img alt="" className={classes.main-photo-item} src={photosList[0]} />
+          <img alt="" className={classes.mainPhotoItem} src={photosList[0]} />
           <img alt="" className={classes.photoItem, classes.itemA} src={photosList[1]} />
           <img alt="" className={classes.photoItem, classes.itemB} src={photosList[2]} />
           <img alt="" className={classes.photoItem, classes.itemC} src={photosList[3]} />
