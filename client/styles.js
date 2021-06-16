@@ -4,11 +4,12 @@ const styles = () => ({
     margin: "10px 10% 0 10%",
     display: "flex",
     flexDirection: "column",
+    maxWidth: "80vw",
   },
-  marqueeApp: {
-    width: "80vw",
-    height: "80vh",
-  },
+  // marqueeApp: {
+  //   width: "80vw",
+  //   height: "80vh",
+  // },
   marqueeDescriptionModal: {
     width: "80%",
     height: "60%",
@@ -35,12 +36,13 @@ const styles = () => ({
   marqueeReadDescriptionButton: {
     fontWeight: "bold",
   },
-  marqueeSubmodulesDiv: {
-    width: 600,
-  },
+  // marqueeSubmodulesDiv: {
+  //   width: 600,
+  // },
   photoBox: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
+    maxWidth: "50vw",
   },
   photoGrid: {
     display: "grid",
