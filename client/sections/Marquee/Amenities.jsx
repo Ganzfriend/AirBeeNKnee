@@ -7,6 +7,7 @@ import TvIcon from '@material-ui/icons/Tv';
 import FireplaceIcon from '@material-ui/icons/Fireplace';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 
+
 const Amenities = ({ listing }) => {
   const { amenities } = listing;
   const amenitiesLookup = {

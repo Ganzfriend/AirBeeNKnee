@@ -1,4 +1,6 @@
 import React from 'react';
+import KingBedIcon from '@material-ui/icons/KingBed';
+
 import './fashion.css';
 
 const Sleeping = ({ listing }) => {

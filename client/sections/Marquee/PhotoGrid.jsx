@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from '@material-ui/core/Modal';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 import { Skeleton } from '@material-ui/lab';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 import './photo-grid.css';
 
@@ -13,13 +17,12 @@ const PhotoGrid = ({ listing }) => {
       photosList[i] = (<Skeleton variant="rect" />);
     }
   } else {
-    // if not null, should mean we have a displayRecord to pull from
     photosList = pictures?.map((imgName) =>
       // hardcoded for jpg
       `${OBJECT_URL}${imgName}.jpg`);
   }
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
