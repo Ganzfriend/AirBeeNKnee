@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const uri = require("../uri.js");
 
-const uri = process.env.MONGODB_URI;
+// const uri = process.env.MONGODB_URI;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
@@ -50,6 +51,6 @@ const toKnowSchema = new mongoose.Schema({
   id: Number,
 });
 
-module.exports.Hosts = mongoose.model('host', hostSchema);
-module.exports.Locations = mongoose.model('location', locationSchema);
-module.exports.ToKnow = mongoose.model('to_know', toKnowSchema);
+module.exports.Hosts = mongoose.model("host", hostSchema);
+module.exports.Locations = mongoose.model("location", locationSchema);
+module.exports.ToKnow = mongoose.model("to_know", toKnowSchema);

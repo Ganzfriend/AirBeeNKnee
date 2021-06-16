@@ -106,3 +106,5 @@ node_modules
 dist/bundle.js
 config.js
 .env
+*uri.js
+database/uri.js

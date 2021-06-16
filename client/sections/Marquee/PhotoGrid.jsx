@@ -44,7 +44,7 @@ const PhotoGrid = ({ listing }) => {
       <GridList className={classes.marqueePhotoModalGridlist} cols={1} cellHeight={400}>
         {
           photosList?.map( (imgName) => (
-            <GridListTile cols={1}>
+            <GridListTile cols={1} key={imgName}>
               <img src={imgName} />
             </GridListTile>
           ))

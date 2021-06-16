@@ -17,7 +17,6 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
   }
   const regEx = new RegExp(query, 'ig');
   reviews = reviews.filter(({ review }) => review ? regEx.test(review.body) : true);
-  console.log(reviews);
   return (
     <div>
       <Modal
@@ -38,11 +37,11 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
               <TitleBar ratings={ratings} />
               <div id='rvw-mdl-bars'>
                 <div id='rvw-mdl-cat'>
-                  {categories.map(cat => <div>{cat}</div>)}
+                  {categories.map(cat => <div key={cat}>{cat}</div>)}
                 </div>
                 <div id='rvw-mdl-progress'>
                   {catRates.map(rate => (
-                    <div>
+                    <div key={rate}>
                       <ProgressBar now={rate * 20}/>
                       <div id='rvw-mdl-bar-rtg'>{rate}</div>
                     </div>
@@ -65,7 +64,7 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
               </InputGroup>
               <div id='rvw-mdl-reviews'>
                 {reviews.map(({ review }) => (
-                  <div>
+                  <div key={review.name}>
                     <div className='reviewer-title-bar'>
                       <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
                       <div id='reviewer-title-info'>

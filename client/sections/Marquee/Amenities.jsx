@@ -46,7 +46,11 @@ const Amenities = ({ listing }) => {
   }
   return (
     <div>
-      {amenities?.map((amen) => amenitiesLookup[amen])}
+      {amenities?.map((amen, i) => (
+        <span key={i}>
+          {amenitiesLookup[amen]}
+        </span>
+      ))}
     </div>
   );
 };

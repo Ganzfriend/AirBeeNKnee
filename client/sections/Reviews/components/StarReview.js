@@ -26,7 +26,7 @@ const StarReview = ({id = 1}) => {
       <div id='reviews-grid'>
         <div>
           {categories.slice(0, 3).map((cat, i) => (
-            <div>
+            <div key={cat}>
               <div className='cat-name' key={cat}>{cat}</div>
               <div id='cat-progress-bar'>
                 <ProgressBar variant='custom' now={catRates[i] * 20} />
@@ -37,7 +37,7 @@ const StarReview = ({id = 1}) => {
         </div>
         <div>
           {categories.slice(3).map((cat, i) => (
-            <div>
+            <div key={cat}>
               <div className='cat-name' key={cat}>{cat}</div>
               <div id='cat-progress-bar'>
                 <ProgressBar variant='custom' now={catRates[i + 3] * 20} />

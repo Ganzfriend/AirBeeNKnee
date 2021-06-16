@@ -23,7 +23,7 @@ const Policies = ({listing}) => {
       <div>
         {listing?.policies?.map( (policy) => {
           return (
-            <span>
+            <span key={policy?.title}>
             <h3>{policiesLookup[policy?.icon]} {policy?.title}</h3>
             <p>{policy?.description}</p>
             </span>

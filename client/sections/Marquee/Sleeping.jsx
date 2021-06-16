@@ -19,8 +19,8 @@ const Sleeping = ({ listing }) => {
     <div>
       <h2>Sleeping arrangements</h2>
       <div className={classes.marqueeSleepingFlexbox}>
-        {bedrooms?.map((bedroom) => (
-          <div className={classes.marqueeSleepingCard}>
+        {bedrooms?.map((bedroom, i) => (
+          <div className={classes.marqueeSleepingCard} key={i} >
             <h2><KingBedIcon /></h2>
             <h4>Bedroom {roomNum++}</h4>
             <h6>{bedroom}</h6>

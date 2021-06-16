@@ -20,8 +20,8 @@ const Review = ({ reviews, id = 1 }) => {
     <div>
       <div id='reviews-container'>
         <div>
-          {reviews.slice(0, 2).map(({ review }) => (
-            <div>
+          {reviews?.slice(0, 2).map(({ review }) => (
+            <div key={review?.name}>
               <div className='reviewer-title-bar'>
                 <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
                 <div id='reviewer-title-info'>
@@ -37,7 +37,7 @@ const Review = ({ reviews, id = 1 }) => {
         </div>
         <div>
           {reviews.slice(2, 4).map(({ review }) => (
-            <div>
+            <div key={review.name}>
               <div className='reviewer-title-bar'>
                 <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
                 <div id='reviewer-title-info'>
