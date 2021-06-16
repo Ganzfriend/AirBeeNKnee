@@ -37,7 +37,7 @@ const PhotoGrid = ({ listing }) => {
       <button className="marquee-photo-modal-back-button" onClick={handleClose}><ArrowBackIosIcon /></button>
       <GridList className="marquee-photo-modal-gridlist" cols={1} cellHeight={400}>
         {
-          photosList.map( (imgName) => (
+          photosList?.map( (imgName) => (
             <GridListTile cols={1}>
               <img src={imgName} />
             </GridListTile>
