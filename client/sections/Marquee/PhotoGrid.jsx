@@ -19,6 +19,31 @@ const PhotoGrid = ({ listing }) => {
       `${OBJECT_URL}${imgName}.jpg`);
   }
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const modalBody = (
+    <div className="marquee-photo-modal">
+      <button className="marquee-photo-modal-back-button" onClick={handleClose}><ArrowBackIosIcon /></button>
+      <GridList className="marquee-photo-modal-gridlist" cols={1} cellHeight={400}>
+        {
+          photosList.map( (imgName) => (
+            <GridListTile cols={1}>
+              <img src={imgName} />
+            </GridListTile>
+          ))
+        }
+      </GridList>
+    </div>
+  );
+
   return (
     <div className="photo-grid">
       {!!photosList?.length && (
@@ -28,6 +53,10 @@ const PhotoGrid = ({ listing }) => {
           <img alt="" className="photo-item item-b" src={photosList[2]} />
           <img alt="" className="photo-item item-c" src={photosList[3]} />
           <img alt="" className="photo-item item-d" src={photosList[4]} />
+          <button className="photo-button" onClick={handleOpen}> Show all photos </button>
+          <Modal open={open} onClose={handleClose}>
+            {modalBody}
+          </Modal>
         </div>
       )}
     </div>
