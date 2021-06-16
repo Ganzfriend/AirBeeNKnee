@@ -12,10 +12,10 @@
     "build": "webpack --mode production",
     "start": "node server/index.js",
     "test": "jest",
-    "seed host info": "node database/Host-Info/seed.js",
-    "seed reviews": "node database/Reviews/seed.js",
-    "seed related info": "node database/Related-Info/seed.js",
-    "seed marquee": "node database/Marquee/seed_4.js"
+    "seed-host-info": "node database/Host-Info/seed.js",
+    "seed-reviews": "node database/Reviews/seed.js",
+    "seed-related-info": "node database/Related-Info/seed.js",
+    "seed-marquee": "node database/Marquee/seed_4.js"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
