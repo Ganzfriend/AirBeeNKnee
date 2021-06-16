@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-undef */
-
 const initMap = (query = 'Austin, Texas, United States') => {
   console.log(query);
   const loc = {

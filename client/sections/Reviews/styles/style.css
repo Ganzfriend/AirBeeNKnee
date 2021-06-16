@@ -59,7 +59,7 @@
 }
 
 #reviews-title {
-  display: inline-block;
+  /* display: inline-block; */
   margin-left: 5px;
   font-family: 'Airbnb Cereal App Medium';
   font-size: 20px;
