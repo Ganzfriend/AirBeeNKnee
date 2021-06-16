@@ -21,7 +21,7 @@ const styles = () => ({
   },
   carouselButtonGroup: {
     position: "absolute",
-    top: "15%",
+    top: "0%",
     left: "85%",
   },
   carouselButtonGroup2: {
