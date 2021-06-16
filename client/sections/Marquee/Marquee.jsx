@@ -37,8 +37,8 @@ const Marquee = () => {
         <PhotoGrid listing={displayRecord} />
         <div className="marquee-submodules-div">
           <Divider />
-          {/* <Policies listing={displayRecord} /> */}
-          {/* <Divider /> */}
+          <Policies listing={displayRecord} />
+          <Divider />
           <Description listing={displayRecord} />
           <Divider />
           <Sleeping listing={displayRecord} />
