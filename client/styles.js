@@ -2,6 +2,12 @@ const styles = () => ({
   appBody: {
     fontFamily: "Airbnb Cereal App Light",
     margin: "10px 10% 0 10% !important",
+    display: "flex",
+    flexDirection: "column",
+  },
+  marqueeApp: {
+    width: "80vw",
+    height: "80vh",
   },
   marqueeDescriptionModal: {
     width: 600,
