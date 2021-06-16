@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import Modal from '@material-ui/core/Modal';
-// import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
-import './fashion.css';
+import styles from '../../styles.js';
+
+// import './fashion.css';
+const useStyles = makeStyles(styles);
 
 const Description = ({ listing }) => {
   const { description } = listing;
   const [open, setOpen] = useState(false);
+  const classes = useStyles();
 
   const handleOpen = () => {
     setOpen(true);
@@ -26,7 +30,7 @@ const Description = ({ listing }) => {
         ...
         <span
           onClick={handleOpen}
-          className="marquee-read-description-button"
+          className={classes.marqueeReadDescriptionButton}
         >
         <b><u>read more</u></b>
         </span>
@@ -35,7 +39,7 @@ const Description = ({ listing }) => {
         open={open}
         onClose={handleClose}
       >
-        <div className="marquee-description-modal">
+        <div className={classes.marqueeDescriptionModal}>
           <p>
             {listing ? description : '...'}
           </p>

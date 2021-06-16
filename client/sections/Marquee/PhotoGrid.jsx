@@ -4,12 +4,18 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import { Skeleton } from '@material-ui/lab';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import {makeStyles} from '@material-ui/core/styles';
 
-import './photo-grid.css';
+import styles from '../../styles.js';
+
+// import './photo-grid.css';
+const useStyles = makeStyles(styles);
 
 const OBJECT_URL = 'https://destinationcapstone.sfo2.digitaloceanspaces.com/';
 
 const PhotoGrid = ({ listing }) => {
+  const classes = useStyles();
+
   const { pictures } = listing;
   let photosList = [];
   if (!listing) {
@@ -33,9 +39,9 @@ const PhotoGrid = ({ listing }) => {
   };
 
   const modalBody = (
-    <div className="marquee-photo-modal">
-      <button className="marquee-photo-modal-back-button" onClick={handleClose}><ArrowBackIosIcon /></button>
-      <GridList className="marquee-photo-modal-gridlist" cols={1} cellHeight={400}>
+    <div className={classes.marqueePhotoModal}>
+      <button className={classes.marqueePhotoModalBackButton} onClick={handleClose}><ArrowBackIosIcon /></button>
+      <GridList className={classes.marqueePhotoModalGridlist} cols={1} cellHeight={400}>
         {
           photosList?.map( (imgName) => (
             <GridListTile cols={1}>
@@ -48,15 +54,15 @@ const PhotoGrid = ({ listing }) => {
   );
 
   return (
-    <div className="photo-grid">
+    <div className={classes.photoGrid}>
       {!!photosList?.length && (
         <div>
-          <img alt="" className="main-photo-item" src={photosList[0]} />
-          <img alt="" className="photo-item item-a" src={photosList[1]} />
-          <img alt="" className="photo-item item-b" src={photosList[2]} />
-          <img alt="" className="photo-item item-c" src={photosList[3]} />
-          <img alt="" className="photo-item item-d" src={photosList[4]} />
-          <button className="photo-button" onClick={handleOpen}> Show all photos </button>
+          <img alt="" className={classes.main-photo-item} src={photosList[0]} />
+          <img alt="" className={classes.photoItem, classes.itemA} src={photosList[1]} />
+          <img alt="" className={classes.photoItem, classes.itemB} src={photosList[2]} />
+          <img alt="" className={classes.photoItem, classes.itemC} src={photosList[3]} />
+          <img alt="" className={classes.photoItem, classes.itemD} src={photosList[4]} />
+          <button className={classes.photoButton} onClick={handleOpen}> Show all photos </button>
           <Modal open={open} onClose={handleClose}>
             {modalBody}
           </Modal>

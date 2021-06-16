@@ -1,9 +1,15 @@
 import React from 'react';
+import {makeStyles} from '@material-ui/core/styles';
 import KingBedIcon from '@material-ui/icons/KingBed';
 
-import './fashion.css';
+import styles from '../../styles.js';
+
+// import './fashion.css';
+const useStyles = makeStyles(styles);
 
 const Sleeping = ({ listing }) => {
+  const classes = useStyles();
+
   const { bedrooms } = listing;
   if (!listing) {
     return null;
@@ -12,9 +18,9 @@ const Sleeping = ({ listing }) => {
   return (
     <div>
       <h2>Sleeping arrangements</h2>
-      <div className="marquee-sleeping-flexbox">
+      <div className={classes.marqueeSleepingFlexbox}>
         {bedrooms?.map((bedroom) => (
-          <div className="marquee-sleeping-card">
+          <div className={classes.marqueeSleepingCard}>
             <h2><KingBedIcon /></h2>
             <h4>Bedroom {roomNum++}</h4>
             <h6>{bedroom}</h6>
