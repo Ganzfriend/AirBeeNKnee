@@ -46,6 +46,8 @@ const insertSamples4 = (numLocations) => {
 
     tempLocation.amenities = pickMany(6, seedObjs.amenitiesBag);
 
+    tempLocation.policies = seedObjs.policiesBag;
+
     insertArray.push(tempLocation);
   }
 

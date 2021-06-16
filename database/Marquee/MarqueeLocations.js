@@ -19,6 +19,7 @@ const marqueeLocationSchema = new mongoose.Schema({
   price: Number,
   description: String,
   amenities: Array,
+  policies: Array,
 });
 
 const MarqueeLocations = mongoose.model('MarqueeLocations', marqueeLocationSchema);
