@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Divider from '@material-ui/core/Divider';
+
 import PhotoGrid from './PhotoGrid.jsx';
 import Title from './Title.jsx';
 import Policies from './Policies.jsx';

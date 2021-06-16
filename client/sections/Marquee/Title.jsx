@@ -5,7 +5,7 @@ import StarIcon from '@material-ui/icons/Star';
 const Title = ({ listing }) => {
   const { title, rating, location } = listing;
   if (!listing) { // skeletons
-    return (<Skeleton variant="text" />);
+    return ( <Skeleton variant="text" /> );
   } // should have a record available
   return (
   // use react fragment here?

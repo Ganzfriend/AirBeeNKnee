@@ -1,6 +1,7 @@
 import React from 'react';
-import './photo-grid.css';
 import { Skeleton } from '@material-ui/lab';
+
+import './photo-grid.css';
 
 const OBJECT_URL = 'https://destinationcapstone.sfo2.digitaloceanspaces.com/';
 

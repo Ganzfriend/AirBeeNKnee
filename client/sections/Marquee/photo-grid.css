@@ -1,7 +1,9 @@
 .photo-grid {
   display: grid;
-  grid-template-columns: 250px 250px 250px 250px;
-  grid-template-rows: 250px 250px;
+  /* grid-template-columns: 250px 250px 250px 250px; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 250px 250px; */
+  grid-template-rows: 1fr 1fr;
 }
 
 .photo-item {
@@ -31,7 +33,7 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  background: blue;
+  background: rgb(184, 184, 247);
 }
 
 .item-b {
@@ -39,7 +41,7 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  background: gold;
+  background: rgb(241, 241, 245);
 }
 
 .item-c {

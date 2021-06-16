@@ -39,13 +39,15 @@ hr {
   position: relative;
 }
 
+
+
 #wrapper #map {
   height: 500px;
-  max-width: none ;
+  max-width: none !important;
 }
 
 .gm-bundled-control div {
-  border-radius: 8px ;
+  border-radius: 8px !important;
 }
 
 .loc-notice, .sel-transit {
@@ -113,7 +115,7 @@ hr {
   font-family: 'Airbnb Cereal App Medium';
   padding: 10px 18px 10px 18px;
   font-size: 16px;
-  outline: none ;
+  outline: none !important;
 }
 
 .host-button:hover {
@@ -302,5 +304,5 @@ a svg {
 }
 
 .loc-modal .modal-content {
-  border-radius: 0% ;
+  border-radius: 0% !important;
 }

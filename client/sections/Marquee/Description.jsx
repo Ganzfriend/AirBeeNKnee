@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '@material-ui/core/Modal';
 // import {makeStyles} from '@material-ui/core/styles';
+
 import './fashion.css';
 
 const Description = ({ listing }) => {
@@ -14,14 +15,6 @@ const Description = ({ listing }) => {
   const handleClose = () => {
     setOpen(false);
   };
-
-  const modalBody = (
-    <div className="marquee-description-modal">
-      <p>
-        {listing ? description : '...'}
-      </p>
-    </div>
-  );
 
   if (!listing) {
     return null;
@@ -37,7 +30,11 @@ const Description = ({ listing }) => {
         open={open}
         onClose={handleClose}
       >
-        {modalBody}
+        <div className="marquee-description-modal">
+          <p>
+            {listing ? description : '...'}
+          </p>
+        </div>
       </Modal>
     </div>
   );

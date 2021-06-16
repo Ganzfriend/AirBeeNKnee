@@ -1,6 +1,5 @@
 .marquee-app {
-  margin-right: 150px;
-  margin-left: 150px;
+  margin: 0 150px 0 150px;
 }
 
 .marquee-description-modal {
