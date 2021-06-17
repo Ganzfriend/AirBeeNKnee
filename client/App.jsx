@@ -15,9 +15,11 @@ const App = () => {
 
   return (
     <div className={classes.appBody}>
-      <Marquee />
-      <HostInfo />
-      <Reviews />
+      <div style={{margin: "100px 10% 0 10%"}}>
+        <Marquee />
+        <HostInfo />
+        <Reviews />
+      </div>
       <RelatedInfo />
     </div>
   )

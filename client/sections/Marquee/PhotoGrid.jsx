@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import Modal from '@material-ui/core/Modal';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+import {Modal, Button, GridList, GridListTile} from '@material-ui/core';
 import { Skeleton } from '@material-ui/lab';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import DragIndicatorIcon from '@material-ui/icons/DragIndicator';
 import {makeStyles} from '@material-ui/core/styles';
 
 import styles from '../../styles.js';
@@ -56,7 +55,7 @@ const PhotoGrid = ({ listing }) => {
   return (
     <div>
       {!!photosList?.length && (
-        <div>
+        <div className={classes.photoSection}>
           <div className={classes.photoBox}>
             <img alt="" className={classes.mainPhotoItem} src={photosList[0]} />
             <div className={classes.photoGrid}>
@@ -66,7 +65,15 @@ const PhotoGrid = ({ listing }) => {
               <img alt="" className={classes.photoItem} src={photosList[4]} />
             </div>
           </div>
-          <button className={classes.photoButton} onClick={handleOpen}> Show all photos </button>
+          <Button
+            startIcon={<DragIndicatorIcon/>}
+            className={classes.photoButton}
+            onClick={handleOpen}
+            variant="contained"
+            color="default"
+          >
+            Show all photos
+          </Button>
           <Modal open={open} onClose={handleClose}>
             {modalBody}
           </Modal>

@@ -1,10 +1,8 @@
 const styles = () => ({
   appBody: {
     fontFamily: "Airbnb Cereal App Light",
-    margin: "10px 10% 0 10%",
     display: "flex",
     flexDirection: "column",
-    // maxWidth: "80vw",
   },
   // marqueeApp: {
   //   width: "80vw",
@@ -39,6 +37,9 @@ const styles = () => ({
   // marqueeSubmodulesDiv: {
   //   width: 600,
   // },
+  photoSection: {
+    position: "relative",
+  },
   photoBox: {
     display: "flex",
     flexDirection: "rows",
@@ -48,13 +49,13 @@ const styles = () => ({
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gridTemplateRows: "1fr 1fr",
-    height: "auto",
   },
   photoItem: {
     margin: "2.5px",
-    maxHeight: 160,
-    width: 240,
+    height: 200,
+    width: "20vw",
     objectFit: "cover",
+    borderRadius: 3,
   },
   // marqueeImage: {
   //   maxWidth: "100vw",
@@ -63,18 +64,18 @@ const styles = () => ({
   // },
   mainPhotoItem: {
     margin: 5,
-    height: 320,
+    height: 410,
     width: "50%",
+    borderRadius: "10px 0 0 10px",
     objectFit: "cover",
   },
   photoButton: {
-    gridColumnStart: 4,
-    gridRowStart: 2,
-    position: "relative",
-    top: 180,
-    left: 40,
-    height: 30,
-    width: 160,
+    position: "absolute",
+    top: "81%",
+    left: "83%",
+    height: 40,
+    width: "auto",
+    borderRadius: 8,
   },
   marqueePhotoModalGridlist: {
     width: "50%",
