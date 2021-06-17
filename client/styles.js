@@ -9,32 +9,6 @@ const styles = () => ({
   //   width: "80vw",
   //   height: "80vh",
   // },
-  marqueeDescriptionModal: {
-    width: "80%",
-    height: "60%",
-    // width: 600,
-    // height: 400,
-    position: "absolute",
-    top: 100,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    margin: "auto",
-    background: "seashell",
-  },
-  marqueeSleepingCard: {
-    width: 150,
-    height: 125,
-    borderRadius: "10%",
-    border: "1px solid lightgray",
-    margin: 5,
-  },
-  marqueeSleepingFlexbox: {
-    display: "flex",
-  },
-  marqueeReadDescriptionButton: {
-    fontWeight: "bold",
-  },
   // marqueeSubmodulesDiv: {
   //   width: 600,
   // },
@@ -124,6 +98,33 @@ const styles = () => ({
     width: 50,
     borderRadius: "50%",
     border: "none",
+  },
+  marqueeDescriptionModal: {
+    width: "80%",
+    height: "60%",
+    // width: 600,
+    // height: 400,
+    position: "absolute",
+    top: 100,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    margin: "auto",
+    background: "seashell",
+  },
+  marqueeSleepingCard: {
+    width: 150,
+    height: 125,
+    borderRadius: "10%",
+    border: "1px solid lightgray",
+    margin: 5,
+    padding: 10,
+  },
+  marqueeSleepingFlexbox: {
+    display: "flex",
+  },
+  marqueeReadDescriptionButton: {
+    fontWeight: "bold",
   },
 });
 
