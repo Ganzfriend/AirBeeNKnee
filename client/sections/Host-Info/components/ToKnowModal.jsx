@@ -1,10 +1,17 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 import CloseIcon from '@material-ui/icons/Close';
+import {makeStyles} from '@material-ui/core/styles';
+
 import Health from './Health.jsx';
 import Rules from './Rules.jsx';
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 const ToKnowModal = ({ whatToKnow, show, close }) => {
+  const classes = useStyles();
+
   let title = 'House rules';
   let subTitle = 'Additional rules';
   let mainShow = <Rules rules={whatToKnow.house} />;
@@ -31,15 +38,15 @@ const ToKnowModal = ({ whatToKnow, show, close }) => {
       centered
       animation
     >
-      <div id='close-modal'>
-        <button className="host-button" type='button' onClick={close}>
+      <div id="close-modal" className={classes.closeModal}>
+        <button className={classes.hostButton} type='button' onClick={close}>
           <CloseIcon fontSize='small' />
         </button>
       </div>
       <Body>
         <Title>{title}</Title>
         {mainShow}
-        <div id='modal-subtitle'>
+        <div id='modal-subtitle' className={classes.modalSubtitle}>
           {subTitle}
         </div>
         {subShow}
