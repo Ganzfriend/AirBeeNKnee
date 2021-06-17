@@ -1,7 +1,6 @@
 const styles = () => ({
   appBody: {
     fontFamily: "Airbnb Cereal App Light",
-    margin: "10px 10% 0 10%",
     display: "flex",
     flexDirection: "column",
     // maxWidth: "80vw",
@@ -60,7 +59,7 @@ const styles = () => ({
     margin: "2.5px",
     // width: "50%",
     // height: "50%",
-    maxHeight: 160,
+    height: 200,
     // width: "auto",
     // width: 274,
     width: 240,
@@ -80,7 +79,7 @@ const styles = () => ({
     margin: 5,
     // width: "60vw",
     // height: "60vh",
-    height: 320,
+    height: 400,
     // height: "auto",
     width: "50%",
     // width: 564,
