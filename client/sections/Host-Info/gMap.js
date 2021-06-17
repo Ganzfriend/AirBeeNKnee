@@ -1,4 +1,4 @@
-const initMap = (query = 'Austin, Texas, United States') => {
+const initMap = (query = "Austin, Texas, United States") => {
   console.log(query);
   const loc = {
     lat: 0,
@@ -15,7 +15,7 @@ const initMap = (query = 'Austin, Texas, United States') => {
       const mapOptions = {
         center: loc,
         zoom: 12,
-        mapId: '154f55af6afa1600',
+        mapId: "154f55af6afa1600",
         fullscreenControl: false,
         mapTypeControl: false,
         scrollwheel: false,
@@ -27,8 +27,8 @@ const initMap = (query = 'Austin, Texas, United States') => {
         },
       };
 
-      map = new google.maps.Map(document.getElementById('map'), mapOptions);
-      console.log('Map loaded');
+      map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      console.log("Map loaded");
 
       new google.maps.Marker({
         position: loc,
@@ -37,12 +37,12 @@ const initMap = (query = 'Austin, Texas, United States') => {
       const transit = new google.maps.TransitLayer();
       let transitShown = false;
 
-      document.getElementById('transit').addEventListener('click', () => {
+      document.getElementById("transit").addEventListener("click", () => {
         !transitShown ? transit.setMap(map) : transit.setMap(null);
         transitShown = !transitShown;
       });
     } else {
-      console.log('error');
+      console.log("error");
       console.log(results, status);
     }
   });
