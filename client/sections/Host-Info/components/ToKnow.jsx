@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import {makeStyles} from '@material-ui/core/styles';
 
 import Health from './Health.jsx';
 import Rules from './Rules.jsx';
 import ToKnowModal from './ToKnowModal.jsx';
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 const ToKnow = () => {
+  const classes = useStyles();
+
   const [showRules, setShowRules] = useState(false);
   const [showSafety, setShowSafety] = useState(false);
   const [showCancel, setShowCancel] = useState(false);
@@ -33,29 +39,29 @@ const ToKnow = () => {
     : (
       <div>
         <br />
-        <div id='toKnow-title'>Things to know</div>
+        <div className={classes.toKnowTitle}>Things to know</div>
         <br />
-        <div id='toKnow-grid'>
+        <div className={classes.toKnowGrid}>
           <div>
-            <div className='Know-subtitle'>House rules</div>
+            <div className={classes.knowSubtitle}>House rules</div>
             <Rules rules={rules.house} />
-            <a href='#' className="a-loc" onClick={(e) => openModal(e, setShowRules)}>
+            <a href='#' className={classes.aLoc} onClick={(e) => openModal(e, setShowRules)}>
               Show more
               <ChevronRightIcon />
             </a>
           </div>
           <div>
-            <div className='Know-subtitle'>{healthTitle}</div>
+            <div className={classes.knowSubtitle}>{healthTitle}</div>
             <Health health={health.safety} />
-            <a href='#' className="a-loc" onClick={(e) => openModal(e, setShowSafety)}>
+            <a href='#' className={classes.aLoc} onClick={(e) => openModal(e, setShowSafety)}>
               Show more
               <ChevronRightIcon />
             </a>
           </div>
           <div>
-            <div className='Know-subtitle'>Cancellation policy</div>
-            {cancelPolicy.map((line) => <div className='rule' key={line}>{line}</div>)}
-            <a href='#' className="a-loc" onClick={(e) => openModal(e, setShowCancel)}>
+            <div className={classes.knowSubtitle}>Cancellation policy</div>
+            {cancelPolicy.map((line) => <div className={classes.rule} key={line}>{line}</div>)}
+            <a href='#' className={classes.aLoc} onClick={(e) => openModal(e, setShowCancel)}>
               More details
               <ChevronRightIcon />
             </a>
