@@ -44,7 +44,7 @@ const Location = () => {
       <hr />
       <h4 className={classes.locTitle}>Location</h4>
       <div className={classes.wrapper}>
-        {!isShown && <div className={classes.map} />}
+        {!isShown && <div className={classes.map, classes.wrapperMap} />}
         <div className={classes.locNotice}>Exact location provided after booking</div>
         <div className={classes.selTransit}>
           <label htmlFor='transit'>
@@ -84,7 +84,7 @@ const Location = () => {
         <Modal.Body>
           <div className={classes.locOverlay}>
             <button
-              className={classes.hostButton}
+              className={classes.hostButton, classes.locOverlayBtn}
               id='close-loc-modal'
               type='button'
               onClick={() => setIsShown(false)}
@@ -93,7 +93,7 @@ const Location = () => {
             </button>
             <div className={classes.locInfo}>
               <div>
-                <h1>Location</h1>
+                <h1 className={classes.locInfoH1}>Location</h1>
                 <div className={classes.locTitle}>
                   <h6>{`${city}, ${state}, ${country}`}</h6>
                 </div>
@@ -117,7 +117,7 @@ const Location = () => {
                 </div>
               </div>
               <div>
-                <div className={classes.map}>
+                <div className={classes.map, classes.locInfoMap}>
                   <div className={classes.locNotice, classes.locNoticeModal}>Exact location provided after booking</div>
                   <div className={classes.selTransit, classes.selTransitModal}>
                     <label htmlFor='transit'>

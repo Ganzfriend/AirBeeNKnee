@@ -12,8 +12,8 @@ const Health = ({ health }) => {
 
   const committed = <i className={classes.fas, classes.faHandSparkles} />;
   const clean = <i className={classes.fas, classes.faHandsWash} />;
-  const check = <CheckCircleIcon />;
-  const card = <CreditCardIcon />;
+  const check = <CheckCircleIcon className={classes.svg} />;
+  const card = <CreditCardIcon className={classes.svg} />;
 
   const template = (icon, rule) => (
     <div className={classes.rule} key={rule}>

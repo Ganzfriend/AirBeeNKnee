@@ -189,243 +189,261 @@ const styles = (theme) => ({
   marqueeReadDescriptionButton: {
     fontWeight: "bold",
   },
-hostBody: {
-  font-family: 'Airbnb Cereal App Light';
-  margin: 10px 15% 0 15%;
-},
-hr: {
-  font-size: 40px;
-  border: .001em solid rgb(230, 230, 230);
-},
-loc-title: {
-  font-family: 'Airbnb Cereal App Medium';
-  margin-top: 30px;
-  margin-bottom: 25px;
-},
-#wrapper: {
-  position: relative;
-},
-#wrapper #map: {
-  height: 500px;
-  max-width: none !important;
-},
-gm-bundled-control div: {
-  border-radius: 8px !important;
-},
-loc-notice, .sel-transit: {
-  position: absolute;
-  border: 1px solid white;
-  border-radius: 8px;
-  background-color: white;
-},
-loc-notice: {
-  top: 430px;
-  left: 34%;
-  height: 40px;
-  width: 280px;
-  font-family: 'Airbnb cereal App Book';
-  font-size: 14px;
-  text-align: center;
-  padding-top: 8px;
-},
-sel-transit: {
-  top: 10px;
-  left: 75%;
-  height: 30px;
-  width: 140px;
-  font-family: 'Airbnb cereal App Book';
-  font-size: 17px;
-  padding-top: 5px;
-  padding-left: 5px;
-},
-#transit: {
-  zoom: 1.5;
-  cursor: pointer;
-},
-#public-transit: {
-  display: inline-block;
-  margin-left: 5px;
-  vertical-align: 3px;
-  cursor: pointer;
-},
-sel-transit:hover: {
-  background-color: rgb(245, 243, 243);
-  cursor: pointer;
-},
-loc-notice-modal: {
-  top: 780px;
-  left: 51%;
-},
-sel-transit-modal: {
-  top: 78px;
-  left: 81%;
-},
-button: {
-  margin: 0 0 20px 0;
-  background-color: white;
-  border: 1px solid black;
-
-  border-radius: 10px;
-  font-family: 'Airbnb Cereal App Medium';
-  padding: 10px 18px 10px 18px;
-  font-size: 16px;
-  outline: none !important;
-},
-button:hover: {
-  background-color: rgb(245, 243, 243);
-  cursor: pointer;
-},
-#loc-overlay button: {
-  border: 1px solid white;
-  padding: 0;
-  font-size: 25px;
-  height: 30px;
-  width: 30px;
-  font-family: 'Airbnbn Cereal App Light';
-  border-radius: 50px;
-},
-#loc-info: {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-},
-#loc-info h1: {
-  font-family: 'Airbnb Cereal App Medium';
-  margin-top: -5px;
-},
-#loc-info #map: {
-  height: 100%;
-  width: fill;
-},
-#loc-desc: {
-  margin-right: 50px;
-},
-#host-img: {
-  height: 70px;
-  width: 70px;
-  border: 1px solid white;
-  border-radius: 50%;
-},
-#host-bar-info: {
-  margin-top: 20px;
-  margin-left: 15px;
-  vertical-align: -75%;
-},
-#host-name: {
-  font-family: 'Airbnb Cereal App Medium';
-  font-size: 22px;
-},
-#host-join: {
-  font-size: 14px;
-  color:  rgb(100, 100, 100);
-},
-#host-info: {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-},
-#host-data: {
-  margin-bottom: -10px;
-},
-#reviews, #verified: {
-  display: inline-flex;
-  margin-left: 10px;
-  margin-right: 15px;
-  vertical-align: 23%;
-},
-#host-desc: {
-  margin-right: 50px;
-},
-a: {
-  font-family: 'Airbnb cereal App Medium';
-  font-size: 16px;
-  color: black;
-  text-decoration: underline;
-},
-#host-desc a:hover: {
-  cursor: pointer;
-  color: black;
-},
-#prot-warning: {
-  margin-left: 12px;
-  display: inline-block;
-  font-size: 14px;
-  width: 300px;
-  vertical-align: -72%;
-},
-#toKnow-title: {
-  font-family: 'Airbnb Cereal App Medium';
-  font-size: 22px;
-},
-#toKnow-grid: {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-},
-Know-subtitle: {
-  font-family: 'Airbnb Cereal App Medium';
-  font-size: 16px;
-  margin-bottom: 20px;
-},
-rule: {
-  margin-bottom: 5px;
-},
-rule svg: {
-  margin-right: 10px;
-  height: 20px;
-},
-rule-line: {
-  display: inline-flex;
-  width: 240px;
-},
-fas: {
-  margin-right: 17px;
-},
-rule img: {
-  height: 25px;
-  width: 25px;
-  margin-right: 10px;
-},
-a svg: {
-  display: flex;
-  margin-top: 10px;
-  vertical-align: -7px;
-},
-#close-modal: {
-  margin-top: 7px;
-  margin-left: 7px;
-},
-modal-content: {
-  border-radius: 15px;
-},
-#close-modal: {
-  height: 40px;
-},
-#close-modal button: {
-  border: 1px solid white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-},
-button svg: {
-  margin-left: -9px;
-},
-modal-title: {
-  font-family: 'Airbnb Cereal App Medium';
-  margin-bottom: 10px;
-},
-#modal-subtitle: {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-family: 'Airbnb Cereal App Medium';
-  font-size: 18px;
-},
-loc-modal: {
-  width: 100vw;
-  max-width: 100vw;
-  margin-top: -1%;
-  margin-bottom: -25px;
-},
-loc-modal .modal-content: {
-  border-radius: 0% !important;
-},
+  hostBody: {
+    fontFamily: "Airbnb Cereal App Light",
+    margin: "10px 15% 0 15%",
+  },
+  // hr: {
+  //   fontSize: 40px,
+  //   border: .001em solid rgb(230, 230, 230),
+  // },
+  locTitle: {
+    fontFamily: "Airbnb Cereal App Medium",
+    marginTop: "30px",
+    marginBottom: "25px",
+  },
+  wrapper: {
+    position: "relative",
+  },
+  wrapperMap: {
+    height: "500px",
+    maxWidth: "none",
+  },
+  gmBundledControl: {
+    borderRadius: "8px",
+  },
+  selTransit: {
+    position: "absolute",
+    border: "1px solid white",
+    borderRadius: "8px",
+    backgroundColor: "white",
+    top: "10px",
+    left: "75%",
+    height: "30px",
+    width: "140px",
+    fontFamily: "Airbnb cereal App Book",
+    fontSize: "17px",
+    paddingTop: "5px",
+    paddingLeft: "5px",
+    "&:hover": {
+      backgroundColor: "rgb(245, 243, 243)",
+      cursor: "pointer",
+    },
+  },
+  // locnotice, .sel-transit: {
+  //   position: absolute,
+  //   border: 1px solid white,
+  //   borderRadius: 8px,
+  //   backgroundColor: white,
+  // },
+  locnotice: {
+    top: "430px",
+    left: "34%",
+    height: "40px",
+    width: "280px",
+    fontFamily: "Airbnb cereal App Book",
+    fontSize: "14px",
+    textAlign: "center",
+    paddingTop: "8px",
+  },
+  // sel-transit: {
+  //   top: 10px,
+  //   left: 75%,
+  //   height: 30px,
+  //   width: 140px,
+  //   fontFamily: 'Airbnb cereal App Book',
+  //   fontSize: 17px,
+  //   paddingTop: 5px,
+  //   paddingLeft: 5px,
+  // },
+  transit: {
+    zoom: 1.5,
+    cursor: "pointer",
+  },
+  publicTransit: {
+    display: "inline-block",
+    marginLeft: "5px",
+    verticalAlign: "3px",
+    cursor: "pointer",
+  },
+  locNoticeModal: {
+    top: "780px",
+    left: "51%",
+  },
+  selTransitModal: {
+    top: "78px",
+    left: "81%",
+  },
+  hostButton: {
+    margin: "0 0 20px 0",
+    backgroundColor: "white",
+    border: "1px solid black",
+    borderRadius: "10px",
+    fontFamily: "Airbnb Cereal App Medium",
+    padding: "10px 18px 10px 18px",
+    fontSize: "16px",
+    outline: "none",
+    "&:hover": {
+      backgroundColor: "rgb(245, 243, 243)",
+      cursor: "pointer",
+    },
+  },
+  locOverlayBtn: {
+    border: "1px solid white",
+    padding: 0,
+    fontSize: 25,
+    height: 30,
+    width: 30,
+    fontFamily: "Airbnb Cereal App Light",
+    borderRadius: 50,
+  },
+  locInfo: {
+    display: "grid",
+    gridTemplateColumns: "1fr 3fr",
+  },
+  locInfoH1: {
+    fontFamily: "Airbnb Cereal App Medium",
+    marginTop: "-5px",
+  },
+  locInfoMap: {
+    height: "100%",
+    width: "fill",
+  },
+  locDesc: {
+    marginRight: 50,
+  },
+  hostImg: {
+    height: 70,
+    width: 70,
+    border: "1px solid white",
+    borderRadius: "50%",
+  },
+  hostBarInfo: {
+    marginTop: 20,
+    marginLeft: 15,
+    verticalAlign: "-75%",
+  },
+  hostName: {
+    fontFamily: "Airbnb Cereal App Medium",
+    fontSize: 22,
+  },
+  hostJoin: {
+    fontSize: 14,
+    color: "rgb(100, 100, 100)",
+  },
+  hostInfo: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+  },
+  hostData: {
+    marginBottom: "-10px",
+  },
+  reviews: {
+    display: "inline-flex",
+    marginLeft: 10,
+    marginRight: 15,
+    verticalAlign: "23%",
+  },
+  verified: {
+    display: "inline-flex",
+    marginLeft: 10,
+    marginRight: 15,
+    verticalAlign: "23%",
+  },
+  hostDesc: {
+    marginRight: 50,
+  },
+  aLoc: {
+    fontFamily: "Airbnb cereal App Medium",
+    fontSize: 16,
+    color: "black",
+    textDecoration: "underline",
+    "&:hover": {
+      cursor: "pointer",
+      color: "black",
+    },
+  },
+  protWarning: {
+    marginLeft: 12,
+    display: "inline-block",
+    fontSize: 14,
+    width: 300,
+    verticalAlign: "-72%",
+  },
+  toKnowTitle: {
+    fontFamily: "Airbnb Cereal App Medium",
+    fontSize: 22,
+  },
+  toKnowGrid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr",
+  },
+  knowSubtitle: {
+    fontFamily: "Airbnb Cereal App Medium",
+    fontSize: 16,
+    marginBottom: 20,
+  },
+  rule: {
+    marginBottom: 5,
+  },
+  ruleSvg: {
+    marginRight: 10,
+    height: 20,
+  },
+  ruleLine: {
+    display: "inline-flex",
+    width: 240,
+  },
+  fas: {
+    marginRight: 17,
+  },
+  // rule img: {
+  //   height: 25,
+  //   width: 25,
+  //   marginRight: 10,
+  // },
+  // a svg: {
+  //   display: flex,
+  //   marginTop: 10,
+  //   verticalAlign: '-7px',
+  // },
+  /* not sure what's going on with the 'rule img' or 'a svg' styling, so i'll come back to it */
+  closeModal: {
+    marginTop: 7,
+    marginLeft: 7,
+    height: 40,
+  },
+  modalContent: {
+    borderRadius: 15,
+  },
+  // closeModal button: {
+  //   border: 1px solid white,
+  //   borderRadius: 50%,
+  //   width: 40px,
+  //   height: 40px,
+  // },
+  // button svg: {
+  //   marginLeft: -9px,
+  // },
+  modalTitle: {
+    fontFamily: "Airbnb Cereal App Medium",
+    marginBottom: 10,
+  },
+  modalSubtitle: {
+    marginTop: 10,
+    marginBottom: 15,
+    fontFamily: "Airbnb Cereal App Medium",
+    fontSize: 18,
+  },
+  locModal: {
+    width: "100vw",
+    maxWidth: "100vw",
+    marginTop: "-1%",
+    marginBottom: "-25px",
+  },
+  // locmodal .modal-content: {
+  //   borderRadius: 0% !important,
+  // },
 });
 
 export default styles;

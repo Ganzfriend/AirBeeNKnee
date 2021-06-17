@@ -103,11 +103,11 @@ const HostInfo = () => {
         <div className={classes.hostInfo}>
           <div>
             <div className={classes.hostData}>
-              <StarIcon style={{ color: 'red' }} />
+              <StarIcon style={{ color: 'red' }} className={classes.svg} />
               <div className={classes.reviews}>
                 {`${reviews} Reviews`}
               </div>
-              {verified ? <VerifiedUserIcon style={{ color: 'red' }} /> : <ReportProblemIcon style={{ color: 'red' }} />}
+              {verified ? <VerifiedUserIcon style={{ color: 'red' }} className={classes.svg} /> : <ReportProblemIcon style={{ color: 'red' }} className={classes.svg} />}
               <div className={classes.verified}>
                 {verified ? 'Identity Verified' : 'Not Verified'}
               </div>
@@ -137,7 +137,7 @@ const HostInfo = () => {
               Contact host
             </button>
             <div>
-              <SecurityIcon style={{ color: 'blue', display: 'inline-block' }} />
+              <SecurityIcon style={{ color: 'blue', display: 'inline-block' }} className={classes.svg} />
               <div className={classes.protWarning}>
                 To protect your payment, never transfer
                 money or communicate outside of the Destination Capstone
