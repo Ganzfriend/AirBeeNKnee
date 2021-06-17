@@ -45,7 +45,7 @@ const ToKnow = () => {
           <div>
             <div className={classes.knowSubtitle}>House rules</div>
             <Rules rules={rules.house} />
-            <a href='#' className={classes.aLoc} onClick={(e) => openModal(e, setShowRules)}>
+            <a href='#' className={classes.aLoc, classes.aSvg} onClick={(e) => openModal(e, setShowRules)}>
               Show more
               <ChevronRightIcon className={classes.svg} />
             </a>
@@ -53,7 +53,7 @@ const ToKnow = () => {
           <div>
             <div className={classes.knowSubtitle}>{healthTitle}</div>
             <Health health={health.safety} />
-            <a href='#' className={classes.aLoc} onClick={(e) => openModal(e, setShowSafety)}>
+            <a href='#' className={classes.aLoc, classes.aSvg} onClick={(e) => openModal(e, setShowSafety)}>
               Show more
               <ChevronRightIcon className={classes.svg} />
             </a>
@@ -61,7 +61,7 @@ const ToKnow = () => {
           <div>
             <div className={classes.knowSubtitle}>Cancellation policy</div>
             {cancelPolicy.map((line) => <div className={classes.rule} key={line}>{line}</div>)}
-            <a href='#' className={classes.aLoc, classes.aRule} onClick={(e) => openModal(e, setShowCancel)}>
+            <a href='#' className={classes.aLoc, classes.aSvg} onClick={(e) => openModal(e, setShowCancel)}>
               More details
               <ChevronRightIcon className={classes.svg} />
             </a>

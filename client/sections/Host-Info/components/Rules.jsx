@@ -17,9 +17,9 @@ const Rules = ({ rules }) => {
   const smoke = <SmokeFreeIcon className={classes.svg, classes.ruleSvg} />;
   const check = <ScheduleIcon className={classes.svg, classes.ruleSvg} />;
   const music = <VolumeOffIcon className={classes.svg, classes.ruleSvg} />;
-  const pets = <img src='https://img.icons8.com/ios-glyphs/30/000000/pet-commands-dismiss.png' alt='' />;
-  const noParty = <img src='https://img.icons8.com/ios-glyphs/30/000000/no-alcohol.png' alt='' />;
-  const party = <img src='https://img.icons8.com/ios-glyphs/30/000000/champagne.png' alt='' />;
+  const pets = <img className={classes.ruleImg} src='https://img.icons8.com/ios-glyphs/30/000000/pet-commands-dismiss.png' alt='' />;
+  const noParty = <img className={classes.ruleImg} src='https://img.icons8.com/ios-glyphs/30/000000/no-alcohol.png' alt='' />;
+  const party = <img className={classes.ruleImg} src='https://img.icons8.com/ios-glyphs/30/000000/champagne.png' alt='' />;
   const child = <RemoveShoppingCartIcon className={classes.svg, classes.ruleSvg} />;
   const jeff = <PersonAddDisabledIcon className={classes.svg, classes.ruleSvg} />;
   const group = <GroupIcon className={classes.svg, classes.ruleSvg} />;
