@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Moment from 'moment';
+
+import {makeStyles} from '@material-ui/core/styles';
 import StarIcon from '@material-ui/icons/Star';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';
@@ -9,8 +11,13 @@ import { Modal, Button, Form } from 'react-bootstrap';
 
 import Location from './Location.jsx';
 import ToKnow from './ToKnow.jsx';
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 const HostInfo = () => {
+  const classes = useStyles();
+
   const [showMore, setShowMore] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [msgName, setMsgName] = useState('');
@@ -79,41 +86,41 @@ const HostInfo = () => {
 
   return !host.name ? <div />
     : (
-      <div className="body">
+      <div className={classes.hostBody}>
         <Location />
-        <div id='host-bar'>
-          <img src={photo} alt='' id='host-img' />
-          <div id='host-bar-info' style={{ display: 'inline-block' }}>
-            <h3 id='host-name'>
+        <div className={classes.hostBar}>
+          <img src={photo} alt='' className={classes.hostImg} />
+          <div className={classes.hostBarInfo} style={{ display: 'inline-block' }}>
+            <h3 className={classes.hostName}>
               {`Hosted by ${name.split(' ')[0]}`}
             </h3>
-            <div id='host-join'>
+            <div className={classes.hostJoin}>
               {`Joined in ${Moment(new Date(joinDate)).format('MMMM YYYY')}`}
             </div>
           </div>
         </div>
         <br />
-        <div id='host-info'>
+        <div className={classes.hostInfo}>
           <div>
-            <div id='host-data'>
+            <div className={classes.hostData}>
               <StarIcon style={{ color: 'red' }} />
-              <div id='reviews'>
+              <div className={classes.reviews}>
                 {`${reviews} Reviews`}
               </div>
               {verified ? <VerifiedUserIcon style={{ color: 'red' }} /> : <ReportProblemIcon style={{ color: 'red' }} />}
-              <div id='verified'>
+              <div className={classes.verified}>
                 {verified ? 'Identity Verified' : 'Not Verified'}
               </div>
             </div>
             <br />
-            <div id='host-desc'>
+            <div className={classes.hostDesc}>
               {showMore && desc}
               {!showMore && desc.split(' ').slice(0, 25).join(' ')}
               {!showMore && '...  '}
-              {!showMore && <a className="a-loc" href='#' onClick={toggleDesc}>read more</a>}
+              {!showMore && <a className={classes.aLoc} href='#' onClick={toggleDesc}>read more</a>}
             </div>
           </div>
-          <div id='host-contact'>
+          <div className={classes.hostContact}>
             <div>
               {`Response rate: ${response.rate}%`}
             </div>
@@ -122,10 +129,16 @@ const HostInfo = () => {
               {`Response time: ${response.time}`}
             </div>
             <br />
-            <button className="host-button" type='button' onClick={() => setShowModal(true)}>Contact host</button>
+            <button
+              className={classes.hostButton}
+              type='button'
+              onClick={() => setShowModal(true)}
+            >
+              Contact host
+            </button>
             <div>
               <SecurityIcon style={{ color: 'blue', display: 'inline-block' }} />
-              <div id='prot-warning'>
+              <div className={classes.protWarning}>
                 To protect your payment, never transfer
                 money or communicate outside of the Destination Capstone
                 website or app.
@@ -206,11 +219,11 @@ const HostInfo = () => {
                     Looks good!
                   </Feedback>
                 </Group>
-                <Button className="host-button" type='submit'>Send message</Button>
+                <Button className={classes.hostButton} type='submit'>Send message</Button>
               </Form>
             </Body>
             <Footer>
-              <Button className="host-button" variant='secondary' onClick={resetState}>Close</Button>
+              <Button className={classes.hostButton} variant='secondary' onClick={resetState}>Close</Button>
             </Footer>
           </Modal>
         </div>
