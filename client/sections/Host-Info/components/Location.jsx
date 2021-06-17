@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Modal } from 'react-bootstrap';
+import {makeStyles} from '@material-ui/core/styles';
+
 import initMap from '../gMap.js';
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 const Location = () => {
+  const classes = useStyles();
+
   const [isShown, setIsShown] = useState(false);
   const [location, setLocation] = useState({});
 
@@ -23,7 +30,6 @@ const Location = () => {
 
   useEffect(() => {
     if (city) {
-      console.log(query);
       initMap(query);
     }
   }, [isShown, city]);
@@ -36,23 +42,23 @@ const Location = () => {
   return (
     <div>
       <hr />
-      <h4 className='loc-title'>Location</h4>
-      <div id='wrapper'>
-        {!isShown && <div id='map' />}
-        <div className='loc-notice'>Exact location provided after booking</div>
-        <div className='sel-transit'>
+      <h4 className={classes.locTitle}>Location</h4>
+      <div className={classes.wrapper}>
+        {!isShown && <div className={classes.map} />}
+        <div className={classes.locNotice}>Exact location provided after booking</div>
+        <div className={classes.selTransit}>
           <label htmlFor='transit'>
             <input id='transit' type='checkbox' value='Transit' />
-            <div id='public-transit'>Public Transit</div>
+            <div className={classes.publicTransit}>Public Transit</div>
           </label>
         </div>
       </div>
       {city && (
       <div>
-        <div className='loc-title'>
+        <div className={classes.locTitle}>
           <h6>{`${city}, ${state}, ${country}`}</h6>
         </div>
-        <div id='desc-prev'>
+        <div className={classes.descPrev}>
           {desc.split(' ').slice(0, 40).join(' ')}
           ...
         </div>
@@ -62,7 +68,7 @@ const Location = () => {
       <button
         id='open-loc-modal'
         type='button'
-        className="host-button"
+        className={classes.hostButton}
         onClick={() => setIsShown(true)}
       >
         More about the location
@@ -73,26 +79,26 @@ const Location = () => {
         onHide={() => setIsShown(false)}
         centered
         animation
-        dialogClassName='loc-modal'
+        dialogClassName={classes.locModal}
       >
         <Modal.Body>
-          <div id='loc-overlay'>
+          <div className={classes.locOverlay}>
             <button
-              className="host-button"
+              className={classes.hostButton}
               id='close-loc-modal'
               type='button'
               onClick={() => setIsShown(false)}
             >
               {'<'}
             </button>
-            <div id='loc-info'>
+            <div className={classes.locInfo}>
               <div>
                 <h1>Location</h1>
-                <div className='loc-title '>
+                <div className={classes.locTitle}>
                   <h6>{`${city}, ${state}, ${country}`}</h6>
                 </div>
                 <div>
-                  <div id='loc-desc'>
+                  <div className={classes.locDesc}>
                     {pars.map((par) => (
                       par.length > 1
                         ? (
@@ -111,12 +117,12 @@ const Location = () => {
                 </div>
               </div>
               <div>
-                <div id='map'>
-                  <div className='loc-notice loc-notice-modal'>Exact location provided after booking</div>
-                  <div className='sel-transit sel-transit-modal'>
+                <div className={classes.map}>
+                  <div className={classes.locNotice, classes.locNoticeModal}>Exact location provided after booking</div>
+                  <div className={classes.selTransit, classes.selTransitModal}>
                     <label htmlFor='transit'>
                       <input id='transit' type='checkbox' value='Transit' />
-                      <div id='public-transit'>Public Transit</div>
+                      <div className={classes.publicTransit}>Public Transit</div>
                     </label>
                   </div>
                 </div>
