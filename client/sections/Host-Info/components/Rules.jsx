@@ -5,22 +5,29 @@ import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import RemoveShoppingCartIcon from '@material-ui/icons/RemoveShoppingCart';
 import PersonAddDisabledIcon from '@material-ui/icons/PersonAddDisabled';
 import GroupIcon from '@material-ui/icons/Group';
+import {makeStyles} from '@material-ui/core/styles';
+
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 const Rules = ({ rules }) => {
-  const smoke = <SmokeFreeIcon />;
-  const check = <ScheduleIcon />;
-  const music = <VolumeOffIcon />;
+  const classes = useStyles();
+
+  const smoke = <SmokeFreeIcon className={classes.svg, classes.ruleSvg} />;
+  const check = <ScheduleIcon className={classes.svg, classes.ruleSvg} />;
+  const music = <VolumeOffIcon className={classes.svg, classes.ruleSvg} />;
   const pets = <img src='https://img.icons8.com/ios-glyphs/30/000000/pet-commands-dismiss.png' alt='' />;
   const noParty = <img src='https://img.icons8.com/ios-glyphs/30/000000/no-alcohol.png' alt='' />;
   const party = <img src='https://img.icons8.com/ios-glyphs/30/000000/champagne.png' alt='' />;
-  const child = <RemoveShoppingCartIcon />;
-  const jeff = <PersonAddDisabledIcon />;
-  const group = <GroupIcon />;
+  const child = <RemoveShoppingCartIcon className={classes.svg, classes.ruleSvg} />;
+  const jeff = <PersonAddDisabledIcon className={classes.svg, classes.ruleSvg} />;
+  const group = <GroupIcon className={classes.svg, classes.ruleSvg} />;
 
   const template = (icon, rule) => (
-    <div className='rule' key={rule}>
+    <div className={classes.rule} key={rule}>
       {icon}
-      <div className='rule-line'>{rule}</div>
+      <div className={classes.ruleLine}>{rule}</div>
     </div>
   );
 

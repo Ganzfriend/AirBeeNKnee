@@ -1,17 +1,24 @@
 import React from 'react';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
+import {makeStyles} from '@material-ui/core/styles';
+
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 const Health = ({ health }) => {
-  const committed = <i className="fas fa-hand-sparkles" />;
-  const clean = <i className="fas fa-hands-wash" />;
-  const check = <CheckCircleIcon />;
-  const card = <CreditCardIcon />;
+  const classes = useStyles();
+
+  const committed = <i className={classes.fas, classes.faHandSparkles} />;
+  const clean = <i className={classes.fas, classes.faHandsWash} />;
+  const check = <CheckCircleIcon className={classes.svg} />;
+  const card = <CreditCardIcon className={classes.svg} />;
 
   const template = (icon, rule) => (
-    <div className='rule' key={rule}>
+    <div className={classes.rule} key={rule}>
       {icon}
-      <div className='rule-line'>{rule}</div>
+      <div className={classes.ruleLine}>{rule}</div>
     </div>
   );
 
