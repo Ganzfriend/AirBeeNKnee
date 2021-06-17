@@ -151,7 +151,7 @@ const HostInfo = () => {
             centered
             animation
           >
-            <Header true>
+            <Header>
               <Title>{`Contact ${name.split(' ')[0]}!`}</Title>
             </Header>
             <Body>

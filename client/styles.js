@@ -191,7 +191,6 @@ const styles = (theme) => ({
   },
   hostBody: {
     fontFamily: "Airbnb Cereal App Light",
-    margin: "10px 15% 0 15%",
   },
   // hr: {
   //   fontSize: 40px,
@@ -236,7 +235,7 @@ const styles = (theme) => ({
   //   borderRadius: 8px,
   //   backgroundColor: white,
   // },
-  locnotice: {
+  locNotice: {
     top: "430px",
     left: "34%",
     height: "40px",
