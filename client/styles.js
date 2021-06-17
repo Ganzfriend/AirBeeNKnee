@@ -57,14 +57,15 @@ const styles = () => ({
   },
   photoItem: {
     margin: "2.5px",
+    height: 200,
+    width: 240,
+    objectFit: "cover",
+    borderRadius: 3,
     // width: "50%",
     // height: "50%",
-    height: 200,
     // width: "auto",
     // width: 274,
-    width: 240,
     // height: 240,
-    objectFit: "cover",
   },
   // marqueeImage: {
   //   maxWidth: "100vw",
@@ -85,6 +86,7 @@ const styles = () => ({
     // width: 564,
     // width: 490,
     // height: 490,
+    borderRadius: "10px 0 0 10px",
     objectFit: "cover",
   },
   // itemA: {
