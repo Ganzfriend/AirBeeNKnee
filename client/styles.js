@@ -396,17 +396,16 @@ const styles = (theme) => ({
   fas: {
     marginRight: 17,
   },
-  // rule img: {
-  //   height: 25,
-  //   width: 25,
-  //   marginRight: 10,
-  // },
-  // a svg: {
-  //   display: flex,
-  //   marginTop: 10,
-  //   verticalAlign: '-7px',
-  // },
-  /* not sure what's going on with the 'rule img' or 'a svg' styling, so i'll come back to it */
+  ruleImg: {
+    height: 25,
+    width: 25,
+    marginRight: 10,
+  },
+  aSvg: {
+    display: "flex",
+    marginTop: 10,
+    verticalAlign: "-7px",
+  },
   closeModal: {
     marginTop: 7,
     marginLeft: 7,
@@ -415,15 +414,15 @@ const styles = (theme) => ({
   modalContent: {
     borderRadius: 15,
   },
-  // closeModal button: {
-  //   border: 1px solid white,
-  //   borderRadius: 50%,
-  //   width: 40px,
-  //   height: 40px,
-  // },
-  // button svg: {
-  //   marginLeft: -9px,
-  // },
+  closeModalBtn: {
+    border: "1px solid white",
+    borderRadius: "50%",
+    width: 40,
+    height: 40,
+  },
+  btnSvg: {
+    marginLeft: "-9px",
+  },
   modalTitle: {
     fontFamily: "Airbnb Cereal App Medium",
     marginBottom: 10,

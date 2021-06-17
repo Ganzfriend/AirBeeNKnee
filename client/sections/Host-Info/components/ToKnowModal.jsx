@@ -39,7 +39,7 @@ const ToKnowModal = ({ whatToKnow, show, close }) => {
       animation
     >
       <div id="close-modal" className={classes.closeModal}>
-        <button className={classes.hostButton} type='button' onClick={close}>
+        <button className={classes.hostButton, classes.closeModalBtn, classes.btnSvg} type='button' onClick={close}>
           <CloseIcon fontSize='small' className={classes.svg} />
         </button>
       </div>
