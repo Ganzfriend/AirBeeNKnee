@@ -7,9 +7,8 @@ const { Hosts, Locations, ToKnow } = require('../database/Host-Info/index.js');
 const { Review, Rating } = require('../database/Reviews/Review.js');
 const { City, Home, Activity } = require('../database/Related-Info/index.js');
 
-
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/listing', express.static(path.join(__dirname, '..', 'dist')));

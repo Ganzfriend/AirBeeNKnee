@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const uri = require("../uri.js");
+const uri = process.env.MONGODB_URI || require("../uri.js");
 
 // const uri = process.env.MONGODB_URI;
 
