@@ -38,18 +38,18 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
             <CloseIcon fontSize='small' />
           </button>
         </div>
-        <Modal.Body>
+        <Modal.Body className={classes.rvwModalContent}>
           <div className={classes.rvwMdlGrid}>
             <div>
-              <TitleBar ratings={ratings} />
+              <TitleBar ratings={ratings} className={classes.rvwModalStars, classes.rvwModalTitle} />
               <div className={classes.rvwMdlBars}>
                 <div className={classes.rvwMdlCat}>
-                  {categories.map(cat => <div key={cat}>{cat}</div>)}
+                  {categories.map(cat => <div className={classes.rvwMdlCatDiv} key={cat}>{cat}</div>)}
                 </div>
                 <div className={classes.rvwMdlProgress}>
                   {catRates.map(rate => (
                     <div key={rate}>
-                      <ProgressBar now={rate * 20}/>
+                      <ProgressBar className={classes.rvwMdlBarsProgressBar} now={rate * 20}/>
                       <div className={classes.rvwMdlBarRtg}>{rate}</div>
                     </div>
                   ))}
@@ -74,7 +74,11 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
                 {reviews.map(({ review }) => (
                   <div key={review.name}>
                     <div className={classes.reviewerTitleBar}>
-                      <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
+                      <img
+                        className={classes.reviewerTitleBarImg}
+                        src='https://source.unsplash.com/random/100x100/?person'
+                        alt=''
+                      />
                       <div className={classes.reviewerTitleInfo}>
                         <div className={classes.reviewTitleName} >{review.name.split(' ')[0]}</div>
                         <div className={classes.reviewTitleJoined} >{Moment(new Date(review.created_at)).format('MMMM YYYY')}</div>

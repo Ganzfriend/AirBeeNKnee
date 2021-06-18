@@ -417,11 +417,11 @@ const styles = (theme) => ({
   // locmodal .modal-content: {
   //   borderRadius: 0% !important,
   // },
-  #reviewsBody: {
+  reviewsBody: {
     fontFamily: 'Airbnb Cereal App Light',
     // margin: '10px 10% 0 10%',
   },
-  #optBtn: {
+  optBtn: {
     margin: '0 0 20px 10px',
     backgroundColor: 'white',
     border: "1px solid rgb(168, 168, 168)",
@@ -435,12 +435,12 @@ const styles = (theme) => ({
       border: '1px solid black',
     },
   },
-  .cardContainer: {
+  cardContainer: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))',
     gridGap: 20,
   },
-  .reviewsCard: {
+  reviewsCard: {
     backgroundColor: 'rgb(235, 228, 247)',
     border: '1px solid gray',
     padding: 10,
@@ -450,79 +450,91 @@ const styles = (theme) => ({
       boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
     },
   },
-  #reviewsTitle: {
+  reviewsTitle: {
     marginLeft: 5,
     fontFamily: 'Airbnb Cereal App Medium',
     fontSize: 20,
     verticalAlign: '-4px',
   },
-  #rvwsStar: {
+  rvwsStar: {
     color: 'red',
     fontSize: 22,
   },
-  #reviewsGrid: {
+  reviewsGrid: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
   },
-  .catName: {
+  catName: {
     fontSize: 17,
     marginBottom: 15,
   },
-  #catProgressBar: {
+  catProgressBar: {
     display: 'table',
     position: 'relative',
   },
-  #catProgressBar .progress: {
+  catProgBarProgress: {
     height: 4,
     width: 140,
     position: 'absolute',
     top: '-2.3vw',
     left: '25vw',
-  },
-  #catProgressBar .progressBar, #rvwMdlBars .progressBar: {
     backgroundColor: 'black',
   },
-  #progressCount, #rvwMdlBarRtg: {
-    display: 'table-cell',
-    padding-left: 20,
-    position: 'absolute',
+  // catProgressBar progress: {
+  //   height: 4,
+  //   width: 140,
+  //   position: 'absolute',
+  //   top: '-2.3vw',
+  //   left: '25vw',
+  // },
+  // catProgressBar progressBar, rvwMdlBars progressBar: {
+  //   backgroundColor: 'black',
+  // },
+  rvwMdlBarsProgressBar: {
+    height: 4,
+    width: 140,
+    marginTop: 26,
+    backgroundColor: 'black',
   },
-  #progressCount: {
+  progressCount: {
     top: '-3vw',
     left: '35.5vw',
+    display: 'table-cell',
+    paddingLeft: 20,
+    position: 'absolute',
   },
-  #buttonNum: {
+  buttonNum: {
     display: 'inline-block',
     fontFamily: 'Airbnb Cereal App Book',
     fontSize: 14,
   },
-  #reviewsContainer: {
+  reviewsContainer: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
   },
-  .reviewerTitleBar img: {
+  reviewerTitleBarImg: {
     height: 70,
     width: 70,
     border: '0 solid white',
     borderRadius: '50%',
   },
-  #reviewerTitleInfo: {
+  reviewerTitleInfo: {
     display: 'inline-block',
     height: 70,
     verticalAlign: '-12px',
     marginLeft: 15,
   },
-  #reviewTitleName: {
+  reviewTitleName: {
     fontSize: 16,
     fontFamily: 'Airbnb Cereal App Medium',
   },
-  #reviewTitleJoin: {
+  reviewTitleJoin: {
     color: 'rgb(168, 168, 168)',
   },
-  #reviewBody: {
+  reviewBody: {
     marginRight: 40,
   },
-  #showRevsBtn: {
+  showRevsBtn: {
     border: '1px solid black',
     backgroundColor: 'white',
     borderRadius: 7,
@@ -534,14 +546,14 @@ const styles = (theme) => ({
       backgroundColor: rgb(240, 240, 240)
     },
   },
-  .rvwModal: {
+  rvwModal: {
     width: '85vw',
     maxWidth: '85vw',
   },
-  .rvw-modal .rvwModalContent: {
+  rvwModalContent: {
     borderRadius: 13px,
   },
-  #rvwMdlCloseBtn: {
+  rvwMdlCloseBtn: {
     marginTop: 10,
     marginLeft: 10,
     height: 35,
@@ -550,51 +562,51 @@ const styles = (theme) => ({
     backgroundColor: 'white',
     outline: 'none',
     '&:hover': {
-      backgroundColor: rgb(240, 240, 240)
+      backgroundColor: 'rgb(240, 240, 240)',
     },
   },
-  #rvwMdlGrid: {
+  rvwMdlGrid: {
     display: 'grid',
     gridTemplateColumns: '1fr 2fr',
   },
-  .rvwModalContent #rvwsStar: {
+  rvwModalStars: {
     color: 'red',
     fontSize: 35,
   },
-  .rvwModalContent #reviewsTitle: {
+  rvwModalTitle: {
     fontSize: 30,
     position: 'absolute',
   },
-  #rvwMdlBars: {
+  rvwMdlBars: {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    padding-right: 50,
-  },
-  #rvwMdlCat div, #rvwMdlBars: {
+    paddingRight: 50,
     marginTop: 10,
     fontSize: 15,
   },
-  #rvwMdlProgress: {
+  rvwMdlCatDiv: {
+    marginTop: 10,
+    fontSize: 15,
+  },
+  rvwMdlProgress: {
     display: 'inline-block',
   },
-  #rvwMdlBarRtg: {
+  rvwMdlBarRtg: {
     marginLeft: '13%',
+    display: 'table-cell',
+    paddingLeft: 20,
+    position: 'absolute',
   },
-  #rvwMdlBars .progress: {
-    height: 4,
-    width: 140,
-    marginTop: 26,
-  },
-  #rvwModalSrch: {
+  rvwModalSrch: {
     top: '6%',
     border: '0px solid white',
     borderRadius: '25%',
   },
-  #rvwSrchBox: {
+  rvwSrchBox: {
     backgroundColor:  'rgb(240, 240, 240)',
     boxShadow: 'none',
   },
-  #rvwMdlReviews: {
+  rvwMdlReviews: {
     marginTop: 10,
     padding: 60,
     max-height: 450,

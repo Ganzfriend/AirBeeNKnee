@@ -36,7 +36,7 @@ const StarReview = ({id = 1}) => {
             <div key={cat}>
               <div className={classes.catName} key={cat}>{cat}</div>
               <div className={classes.catProgressBar}>
-                <ProgressBar variant='custom' now={catRates[i] * 20} />
+                <ProgressBar className={classes.catProgBarProgress} variant='custom' now={catRates[i] * 20} />
                 <div className={classes.progressCount} >{catRates[i]}</div>
               </div>
             </div>
@@ -47,7 +47,7 @@ const StarReview = ({id = 1}) => {
             <div key={cat}>
               <div className={classes.catName} key={cat}>{cat}</div>
               <div className={classes.catProgressBar}>
-                <ProgressBar variant='custom' now={catRates[i + 3] * 20} />
+                <ProgressBar className={classes.catProgBarProgress} variant='custom' now={catRates[i + 3] * 20} />
                 <div className={classes.progressCount} >{catRates[i + 3]}</div>
               </div>
             </div>

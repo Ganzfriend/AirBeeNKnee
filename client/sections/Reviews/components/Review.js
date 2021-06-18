@@ -30,7 +30,11 @@ const Review = ({ reviews, id = 1 }) => {
           {reviews?.slice(0, 2).map(({ review }) => (
             <div key={review?.name}>
               <div className={classes.reviewerTitleBar}>
-                <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
+                <img
+                  className={classes.reviewerTitleBarImg}
+                  src='https://source.unsplash.com/random/100x100/?person'
+                  alt=''
+                />
                 <div className={classes.reviewerTitleInfo}>
                   <div className={classes.reviewTitleName} >{review.name.split(' ')[0]}</div>
                   <div className={classes.reviewTitleJoined} >{Moment(new Date(review.created_at)).format('MMMM YYYY')}</div>
@@ -46,7 +50,11 @@ const Review = ({ reviews, id = 1 }) => {
           {reviews.slice(2, 4).map(({ review }) => (
             <div key={review.name}>
               <div className={classes.reviewerTitleBar}>
-                <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
+                <img
+                  className={classes.reviewerTitleBarImg}
+                  src='https://source.unsplash.com/random/100x100/?person'
+                  alt=''
+                />
                 <div className={classes.reviewerTitleInfo}>
                   <div className={classes.reviewTitleName} >{review.name.split(' ')[0]}</div>
                   <div className={classes.reviewTitleJoined} >{Moment(new Date(review.created_at)).format('MMMM YYYY')}</div>
