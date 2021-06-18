@@ -27,8 +27,8 @@ const Review = ({ reviews, id = 1 }) => {
     <div>
       <div className={classes.reviewsContainer}>
         <div>
-          {reviews?.slice(0, 2).map(({ review }) => (
-            <div key={review?.name}>
+          {reviews?.slice(0, 2).map(({ review }, i) => (
+            <div key={i}>
               <div className={classes.reviewerTitleBar}>
                 <img
                   className={classes.reviewerTitleBarImg}

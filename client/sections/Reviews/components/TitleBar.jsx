@@ -30,7 +30,7 @@ const Title = ({ id }) => {
   }
 
   return (
-    <div>
+    <div className={classes.reviewsTitleBar}>
       <br />
       <StarIcon id='rvws-star' className={classes.rvwsStar}/>
       <div id='reviews-title' className={classes.reviewsTitle}>

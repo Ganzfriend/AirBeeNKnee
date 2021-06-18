@@ -225,6 +225,10 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
       boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
     },
   },
+  reviewsTitleBar: {
+    display: "flex",
+    alignItems: "center",
+  },
   reviewsTitle: {
     marginLeft: 5,
     fontFamily: "Airbnb Cereal App Medium",
