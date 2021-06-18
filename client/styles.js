@@ -10,8 +10,16 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     flexGrow: 1,
     backgroundColor: "#FFF",
   },
+  topBarBox: {
+    margin: "20px 10% 20px 8%",
+  },
   topBarContent: {
-    margin: "30px 10% 0 10%",
+    display: "flex",
+    alignItems: "center",
+  },
+  topBarLeftSide: {
+    // display: "flex",
+    // alignItems: "center",
   },
   topBarMenuButton: {
     marginRight: spacing(2),

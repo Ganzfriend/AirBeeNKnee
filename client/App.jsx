@@ -17,7 +17,7 @@ const App = () => {
   const [listingId, setListingId] = useState(1);
 
   const searchListing = (value) => {
-    if (parseInt(value) > 20 ) return null;
+    if (parseInt(value) > 20 || !parseInt(value) ) return null;
     setListingId(parseInt(value));
   };
 

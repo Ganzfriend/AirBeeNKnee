@@ -43,6 +43,11 @@ const TopBar = ({searchListing}) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  const handleSearch = () => {
+    searchListing(searchVal);
+    setSearchVal('');
+  };
+
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -103,35 +108,38 @@ const TopBar = ({searchListing}) => {
   return (
     <div>
       <AppBar position="static" className={classes.topBar}>
-        <div className={classes.topBarContent}>
+        <div className={classes.topBarBox}>
           <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.topBarMenuButton}
-              aria-label="open drawer"
-            >
-              <MenuIcon />
-            </IconButton>
-            <img src={airbnbLogo.src} alt="Airbnb logo" height="40px" width="42px" />
-            <Typography className={classes.topBarTitle} variant="h5" noWrap>
-              AirBeeNKnee
-            </Typography>
-            <div className={classes.topBarSearch}>
-              <div className={classes.topBarSearchIcon}>
-                <SearchIcon />
+              <div className={classes.topBarContent}>
+                <IconButton
+                  edge="start"
+                  className={classes.topBarMenuButton}
+                  aria-label="open drawer"
+                >
+                  <MenuIcon />
+                </IconButton>
+                <img src={airbnbLogo.src} alt="Airbnb logo" height="40px" width="42px" />
+                <Typography className={classes.topBarTitle} variant="h5" noWrap>
+                  AirBeeNKnee
+                </Typography>
               </div>
-              <InputBase
-                placeholder="Search listing: (1 - 20)"
-                classes={{
-                  root: classes.topBarInputRoot,
-                  input: classes.topBarInputInput,
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-                value={searchVal}
-                onChange={(e) => setSearchVal(e.target.value)}
-                onBlur={() => searchListing(searchVal)}
-              />
-            </div>
+              <div className={classes.topBarSearch}>
+                <div className={classes.topBarSearchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search listing: (1 - 20)"
+                  classes={{
+                    root: classes.topBarInputRoot,
+                    input: classes.topBarInputInput,
+                  }}
+                  inputProps={{ 'aria-label': 'search' }}
+                  value={searchVal}
+                  onChange={(e) => setSearchVal(e.target.value)}
+                  onBlur={handleSearch}
+                  onKeyPress={(e) => {if (e.code === "Enter") handleSearch()}}
+                />
+              </div>
             <div className={classes.topBarGrow} />
             <div className={classes.topBarSectionDesktop}>
               {/* <IconButton aria-label="show 4 new mails" color="inherit">
