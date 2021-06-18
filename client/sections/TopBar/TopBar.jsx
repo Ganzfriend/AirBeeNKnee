@@ -121,13 +121,13 @@ const TopBar = ({searchListing}) => {
                 <SearchIcon />
               </div>
               <InputBase
-                placeholder="Search listing: (1 - 100)"
+                placeholder="Search listing: (1 - 20)"
                 classes={{
                   root: classes.topBarInputRoot,
                   input: classes.topBarInputInput,
                 }}
                 inputProps={{ 'aria-label': 'search' }}
-                value={listingId}
+                value={searchVal}
                 onChange={(e) => setSearchVal(e.target.value)}
                 onBlur={() => searchListing(searchVal)}
               />
