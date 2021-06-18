@@ -7,18 +7,18 @@ import styles from '../../../styles.js';
 
 const useStyles = makeStyles(styles);
 
-const Options = () => {
+const Options = ({ id }) => {
   const classes = useStyles();
 
   const [options, setOptions] = useState({});
 
   useEffect(() => {
-    axios.get(`/rating/${1}`)
+    axios.get(`/rating/${id}`)
       .then(({ data }) => {
         setOptions(data);
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [id]);
 
   const option = options ? options.options : null;
   return option ? (

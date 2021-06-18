@@ -13,7 +13,7 @@ const axios = require('axios');
 
 const useStyles = makeStyles(styles);
 
-const RelatedInfo = () => {
+const RelatedInfo = ({ id = 1 }) => {
   const [city, setCity] = useState('Hollywood, CA');
   const [homeInfo, setHomeInfo] = useState([]);
   const [activityInfo, setActivityInfo] = useState([]);
@@ -27,14 +27,12 @@ const RelatedInfo = () => {
     'Seattle, WA': [2, 5, 8, 9, 10],
   };
 
-  // const findCityName = (paramsId) => {
-  //   for (const key in propertyLocations) {
-  //     const isPresent = propertyLocations[key].indexOf(parseInt(paramsId)) >= 0;
-  //     if (isPresent) {
-  //       return key;
-  //     }
-  //   }
-  // };
+  const findCityName = (paramsId) => {
+    for (const key in propertyLocations) {
+      const isPresent = propertyLocations[key].indexOf(parseInt(paramsId)) >= 0;
+      if (isPresent) return key;
+    }
+  };
 
   const getActivityData = () => {
     axios.get(`/activities/${city}`)
@@ -58,10 +56,10 @@ const RelatedInfo = () => {
     }
   };
 
-  // useEffect(() => {
-  //   setCity(findCityName(id));
-  //   getHomeData();
-  // }, [id, city]);
+  useEffect(() => {
+    setCity(findCityName(id));
+    getHomeData();
+  }, [id, city]);
 
   useEffect(() => { getHomeData()}, [city]);
 

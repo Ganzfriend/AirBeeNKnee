@@ -7,9 +7,9 @@ import styles from '../../styles.js';
 const useStyles = makeStyles(styles);
 
 const Description = ({ listing }) => {
+  const classes = useStyles();
   const { description } = listing;
   const [open, setOpen] = useState(false);
-  const classes = useStyles();
 
   const handleOpen = () => {
     setOpen(true);

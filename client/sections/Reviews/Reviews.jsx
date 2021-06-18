@@ -3,10 +3,17 @@ import Options from './components/Options';
 import Review from './components/Review';
 import StarReview from './components/StarReview';
 import Title from './components/TitleBar.jsx';
+import {makeStyles} from '@material-ui/core/styles';
+
+import styles from '../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 const axios = require('axios');
 
 const Reviews = ({id = 1}) => {
+  const classes = useStyles();
+
   const [reviews, setReviews] = useState([]);
 
   const getReviews = () => {
@@ -18,16 +25,16 @@ const Reviews = ({id = 1}) => {
   useEffect(() => {getReviews()}, []);
 
   return (
-      <div id="reviews-body">
+      <div id="reviews-body" className={classes.reviewsBody}>
         <br />
         <hr />
-        <Title />
+        <Title id={id} />
         <br />
-        <StarReview />
+        <StarReview id={id} />
         <br />
-        <Options />
+        <Options id={id} />
         <br /><br />
-        <Review reviews={reviews} />
+        <Review reviews={reviews} id={id} />
       </div>
     );
 };

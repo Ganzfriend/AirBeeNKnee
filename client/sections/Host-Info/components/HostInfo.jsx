@@ -15,7 +15,7 @@ import styles from '../../../styles.js';
 
 const useStyles = makeStyles(styles);
 
-const HostInfo = () => {
+const HostInfo = ({ id = 1 }) => {
   const classes = useStyles();
 
   const [showMore, setShowMore] = useState(false);
@@ -34,12 +34,12 @@ const HostInfo = () => {
   } = Modal;
 
   useEffect(() => {
-    axios.get(`/hostInfo/${1}`)
+    axios.get(`/hostInfo/${id}`)
       .then(({ data }) => {
         setHost(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   const {
     name, desc, photo, joinDate, verified, reviews, response, _id,
@@ -87,7 +87,7 @@ const HostInfo = () => {
   return !host.name ? <div />
     : (
       <div className={classes.hostBody}>
-        <Location />
+        <Location id={id} />
         <div className={classes.hostBar}>
           <img src={photo} alt='' className={classes.hostImg} />
           <div className={classes.hostBarInfo} style={{ display: 'inline-block' }}>
@@ -228,7 +228,7 @@ const HostInfo = () => {
           </Modal>
         </div>
         <hr />
-        <ToKnow />
+        <ToKnow id={id} />
       </div>
     );
 };

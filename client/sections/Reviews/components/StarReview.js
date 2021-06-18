@@ -9,7 +9,7 @@ import styles from '../../../styles.js';
 const useStyles = makeStyles(styles);
 
 
-const StarReview = ({id = 1}) => {
+const StarReview = ({ id }) => {
   const classes = useStyles();
 
   const [ratings, setRatings] = useState({});

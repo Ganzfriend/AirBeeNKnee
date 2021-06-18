@@ -7,7 +7,7 @@ import styles from '../../../styles.js';
 
 const useStyles = makeStyles(styles);
 
-const Title = ({id = 1}) => {
+const Title = ({ id }) => {
   const classes = useStyles();
 
   const [ratings, setRatings] = useState({});

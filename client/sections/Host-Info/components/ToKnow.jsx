@@ -10,7 +10,7 @@ import styles from '../../../styles.js';
 
 const useStyles = makeStyles(styles);
 
-const ToKnow = () => {
+const ToKnow = ({ id }) => {
   const classes = useStyles();
 
   const [showRules, setShowRules] = useState(false);
@@ -20,12 +20,12 @@ const ToKnow = () => {
   const [toKnow, setToKnow] = useState({});
 
   useEffect(() => {
-    axios.get(`/toKnow/${1}`)
+    axios.get(`/toKnow/${id}`)
       .then(({ data }) => {
         setToKnow(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   const { rules, health, cancelPolicy } = toKnow;
   const healthTitle = 'Health & Safety';

@@ -15,11 +15,13 @@ import styles from '../../styles.js';
 
 const useStyles = makeStyles(styles);
 
-const TopBar = () => {
+const TopBar = ({searchListing}) => {
   const classes = useStyles();
   const {airbnbLogo} = icons;
+
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
+  const [searchVal, setSearchVal] = useState('');
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -125,6 +127,9 @@ const TopBar = () => {
                   input: classes.topBarInputInput,
                 }}
                 inputProps={{ 'aria-label': 'search' }}
+                value={listingId}
+                onChange={(e) => setSearchVal(e.target.value)}
+                onBlur={() => searchListing(searchVal)}
               />
             </div>
             <div className={classes.topBarGrow} />

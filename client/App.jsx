@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Marquee from './sections/Marquee/Marquee.jsx';
@@ -14,15 +14,22 @@ const App = () => {
 
   const classes = useStyles();
 
+  const [listingId, setListingId] = useState(1);
+
+  const searchListing = (value) => {
+    if (parseInt(value) === 1) return null;
+    setListingId(parseInt(value));
+  };
+
   return (
     <div className={classes.appBody}>
-      <TopBar />
+      <TopBar setListingId={setListingId} searchListing={searchListing} />
       <div style={{margin: "50px 10% 0 10%"}}>
-        <Marquee />
-        <Reviews />
-        <HostInfo />
+        <Marquee id={listingId} />
+        <Reviews id={listingId} />
+        <HostInfo id={listingId} />
       </div>
-      <RelatedInfo />
+      <RelatedInfo id={listingId} />
     </div>
   )
 };

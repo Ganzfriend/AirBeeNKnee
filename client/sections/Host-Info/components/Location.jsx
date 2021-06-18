@@ -8,19 +8,19 @@ import styles from '../../../styles.js';
 
 const useStyles = makeStyles(styles);
 
-const Location = () => {
+const Location = ({ id }) => {
   const classes = useStyles();
 
   const [isShown, setIsShown] = useState(false);
   const [location, setLocation] = useState({});
 
   useEffect(() => {
-    axios.get(`/location/${1}`)
+    axios.get(`/location/${id}`)
       .then(({ data }) => {
         setLocation(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
 
   const {
     city, state, country, desc,

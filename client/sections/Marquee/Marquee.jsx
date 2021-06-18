@@ -10,12 +10,11 @@ import Sleeping from './Sleeping.jsx';
 import Amenities from './Amenities.jsx';
 
 import styles from '../../styles.js';
-// import './fashion.css';
 
 const axios = require('axios');
 const useStyles = makeStyles(styles);
 
-const Marquee = () => {
+const Marquee = ({ id = 1}) => {
   const classes = useStyles();
   const [displayRecord, setDisplayRecord] = useState({});
 
@@ -31,8 +30,8 @@ const Marquee = () => {
   };
 
   useEffect(() => {
-    getListingFromServer();
-  }, []);
+    getListingFromServer(id);
+  }, [id]);
 
   return (
     <div>

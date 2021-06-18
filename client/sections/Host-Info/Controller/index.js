@@ -1,11 +1,10 @@
-import axios from 'axios';
+import axios from "axios";
 
-const getData = () => (
+const getData = () =>
   Promise.all([
-    axios.get('/location/Austin'),
-    axios.get('/hostInfo/Jon-Lasley'),
-    axios.get('/toKnow/Model-H-is-for-house'),
-  ])
-);
+    axios.get("/location/1"),
+    axios.get("/hostInfo/1"),
+    axios.get("/toKnow/1"),
+  ]);
 
 export default getData;

@@ -4,7 +4,6 @@ import KingBedIcon from '@material-ui/icons/KingBed';
 
 import styles from '../../styles.js';
 
-// import './fashion.css';
 const useStyles = makeStyles(styles);
 
 const Sleeping = ({ listing }) => {
