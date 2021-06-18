@@ -10,7 +10,6 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
-// import { airbnbLogo } from '../../icons.js';
 import icons from '../../icons.js';
 import styles from '../../styles.js';
 
@@ -102,67 +101,68 @@ const TopBar = () => {
   return (
     <div>
       <AppBar position="static" className={classes.topBar}>
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.topBarMenuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
-          <img src={airbnbLogo.src} alt="Airbnb logo" height="30px" width="30px" />
-          <Typography className={classes.topBarTitle} variant="h6" noWrap>
-            AirBeeNKnee
-          </Typography>
-          <div className={classes.topBarSearch}>
-            <div className={classes.topBarSearchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.topBarInputRoot,
-                input: classes.topBarInputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-          <div className={classes.topBarGrow} />
-          <div className={classes.topBarSectionDesktop}>
-            {/* <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton> */}
-            {/* <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
-            {/* <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton> */}
-          </div>
-          <div className={classes.topBarSectionMobile}>
+        <div className={classes.topBarContent}>
+          <Toolbar>
             <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
+              edge="start"
+              className={classes.topBarMenuButton}
+              aria-label="open drawer"
             >
-              <MoreIcon />
+              <MenuIcon />
             </IconButton>
-          </div>
-        </Toolbar>
+            <img src={airbnbLogo.src} alt="Airbnb logo" height="40px" width="42px" />
+            <Typography className={classes.topBarTitle} variant="h5" noWrap>
+              AirBeeNKnee
+            </Typography>
+            <div className={classes.topBarSearch}>
+              <div className={classes.topBarSearchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search listing: (1 - 100)"
+                classes={{
+                  root: classes.topBarInputRoot,
+                  input: classes.topBarInputInput,
+                }}
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </div>
+            <div className={classes.topBarGrow} />
+            <div className={classes.topBarSectionDesktop}>
+              {/* <IconButton aria-label="show 4 new mails" color="inherit">
+                <Badge badgeContent={4} color="secondary">
+                  <MailIcon />
+                </Badge>
+              </IconButton> */}
+              {/* <IconButton aria-label="show 17 new notifications" color="inherit">
+                <Badge badgeContent={17} color="secondary">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton> */}
+              {/* <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton> */}
+            </div>
+            <div className={classes.topBarSectionMobile}>
+              <IconButton
+                aria-label="show more"
+                aria-controls={mobileMenuId}
+                aria-haspopup="true"
+                onClick={handleMobileMenuOpen}
+                color="inherit"
+              >
+                <MoreIcon />
+              </IconButton>
+            </div>
+          </Toolbar>
+        </div>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}

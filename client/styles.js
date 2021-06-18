@@ -1,6 +1,6 @@
 import { fade } from "@material-ui/core/styles";
 
-const styles = (theme) => ({
+const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
   appBody: {
     fontFamily: "Airbnb Cereal App Light",
     display: "flex",
@@ -9,37 +9,40 @@ const styles = (theme) => ({
   topBar: {
     flexGrow: 1,
     backgroundColor: "#FFF",
-    height: 100,
-    display: "flex",
-    justifyContent: "center",
-    // boxShadow: ,
+  },
+  topBarContent: {
+    margin: "30px 10% 0 10%",
   },
   topBarMenuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: spacing(2),
   },
   topBarTitle: {
     display: "none",
-    [theme.breakpoints.up("sm")]: {
+    [breakpoints.up("sm")]: {
       display: "block",
     },
+    color: "#FF385C",
+    fontWeight: "bold",
+    marginLeft: 10,
   },
   topBarSearch: {
     position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    borderRadius: shape.borderRadius,
+    backgroundColor: fade(palette.common.black, 0.25),
     "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: fade(palette.common.black, 0.25),
+      cursor: "pointer",
     },
-    marginRight: theme.spacing(2),
+    marginRight: spacing(2),
     marginLeft: 0,
     width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(3),
+    [breakpoints.up("sm")]: {
+      marginLeft: spacing(3),
       width: "auto",
     },
   },
   topBarSearchIcon: {
-    padding: theme.spacing(0, 2),
+    padding: spacing(0, 2),
     height: "100%",
     position: "absolute",
     pointerEvents: "none",
@@ -51,24 +54,24 @@ const styles = (theme) => ({
     color: "inherit",
   },
   topBarInputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
+    padding: spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create("width"),
+    paddingLeft: `calc(1em + ${spacing(4)}px)`,
+    transition: transitions.create("width"),
     width: "100%",
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       width: "20ch",
     },
   },
   topBarSectionDesktop: {
     display: "none",
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       display: "flex",
     },
   },
   topBarSectionMobile: {
     display: "flex",
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       display: "none",
     },
   },
