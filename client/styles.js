@@ -114,11 +114,6 @@ const styles = (theme) => ({
     width: "auto",
     borderRadius: 8,
   },
-  marqueePhotoModalGridlist: {
-    width: "50%",
-    marginLeft: 500,
-    marginRight: "auto",
-  },
   marqueePhotoModal: {
     display: "flex",
     justifyContent: "center",
@@ -126,6 +121,12 @@ const styles = (theme) => ({
     // position: "absolute",
     height: "100vh",
     width: "100vw",
+  },
+  marqueePhotoModalGridlist: {
+    width: "50%",
+    margin: "20px auto 20px 500px",
+    // marginLeft: 500,
+    // marginRight: "auto",
   },
   marqueePhotoModalBackButton: {
     display: "block",
@@ -161,6 +162,9 @@ const styles = (theme) => ({
   },
   marqueeReadDescriptionButton: {
     fontWeight: "bold",
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
   hostBody: {
     fontFamily: "Airbnb Cereal App Light",

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Modal from '@material-ui/core/Modal';
+import { Modal, Typography } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 
 import styles from '../../styles.js';
 
-// import './fashion.css';
 const useStyles = makeStyles(styles);
 
 const Description = ({ listing }) => {
@@ -28,12 +27,12 @@ const Description = ({ listing }) => {
       <p>
         {description?.substr(0, 200)}
         ...
-        <span
+        <Typography
           onClick={handleOpen}
           className={classes.marqueeReadDescriptionButton}
         >
-        <b><u>read more</u></b>
-        </span>
+          <b><u>read more</u></b>
+        </Typography>
       </p>
       <Modal
         open={open}

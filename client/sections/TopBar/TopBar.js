@@ -10,6 +10,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
+import { airbnbLogo } from '../../icons.js';
 import styles from '../styles.js';
 
 const useStyles = makeStyles(styles);
@@ -108,8 +109,9 @@ const TopBar = () => {
           >
             <MenuIcon />
           </IconButton>
+          <img src={airbnbLogo.src} alt="Airbnb logo" />
           <Typography className={classes.topBarTitle} variant="h6" noWrap>
-            Material-UI
+            AirBeeNKnee
           </Typography>
           <div className={classes.topBarSearch}>
             <div className={classes.topBarSearchIcon}>
