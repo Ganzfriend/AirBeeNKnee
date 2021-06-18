@@ -162,7 +162,7 @@ exports.policiesBag = [
   },
   {
     title: "Enhanced Clean",
-    description: "This host committed to Airbnb's enhanced cleaning process",
+    description: "This host committed to AirBeeNKnee's enhanced cleaning process",
     icon: "clean",
   },
   {

@@ -1,7 +1,7 @@
-const db = require('mongoose');
-const MarqueeLocations = require('./MarqueeLocations.js');
-const seedObjs = require('./seed_objs.js');
-const alec_seedObjs = require('./alec_seedObjs.js');
+const db = require("mongoose");
+const MarqueeLocations = require("./MarqueeLocations.js");
+const seedObjs = require("./seed_objs.js");
+const alec_seedObjs = require("./alec_seedObjs.js");
 
 const pickMany = (quantity, inList) => {
   const retArr = [];
@@ -36,7 +36,10 @@ const insertSamples4 = (numLocations) => {
 
     tempLocation.guests = Math.ceil(Math.random() * 10);
 
-    tempLocation.bedrooms = pickMany(Math.ceil(Math.random() * 4), seedObjs.bedroomsBag);
+    tempLocation.bedrooms = pickMany(
+      Math.ceil(Math.random() * 4),
+      seedObjs.bedroomsBag
+    );
 
     tempLocation.bathrooms = Math.ceil(Math.random() * 10);
 
@@ -53,10 +56,10 @@ const insertSamples4 = (numLocations) => {
 
   MarqueeLocations.create(insertArray)
     .then(() => {
-      console.log('seed data stored in database');
+      console.log("seed data stored in database");
       db.disconnect();
     })
-    .catch((err) => console.log('the error is: ', err));
+    .catch((err) => console.log("the error is: ", err));
 };
 
 exports.insertSamples4 = insertSamples4;

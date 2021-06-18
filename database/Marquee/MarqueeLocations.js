@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
-const db = require('./index.js');
+const mongoose = require("mongoose");
+const db = require("./index.js");
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  console.log('MongoDB is all connected, folks!');
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", () => {
+  console.log("MongoDB is all connected, folks!");
 });
 
 const marqueeLocationSchema = new mongoose.Schema({
@@ -22,6 +22,9 @@ const marqueeLocationSchema = new mongoose.Schema({
   policies: Array,
 });
 
-const MarqueeLocations = mongoose.model('MarqueeLocations', marqueeLocationSchema);
+const MarqueeLocations = mongoose.model(
+  "MarqueeLocations",
+  marqueeLocationSchema
+);
 
 module.exports = MarqueeLocations;

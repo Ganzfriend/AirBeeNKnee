@@ -6,7 +6,7 @@ const hosts = [
     verified: true,
     photo: 'https://fechostinfo.s3-us-west-1.amazonaws.com/dwayneJohnson',
     joinDate: 'Tue Mar 24 2015 18:00:00 GMT-0600 (Mountain Daylight Time)',
-    desc: 'Hello jabroni! I am a former professionial wrestler, Hollywood mega-star, and full-time Airbnb host. When not hosting my mansions for you, I am all around the world, on tv/movie sets, and defeated evil geniuses. Due to my crazy lifestyle, I unfortunately can\'t be there for introducing you to my pad, but i\'m sure you\'ll live in luxury! Make yourself at home, live the life of a hollywood star, just like you are and kick some candy a**!',
+    desc: 'Hello jabroni! I am a former professionial wrestler, Hollywood mega-star, and full-time AirBeeNKnee host. When not hosting my mansions for you, I am all around the world, on tv/movie sets, and defeated evil geniuses. Due to my crazy lifestyle, I unfortunately can\'t be there for introducing you to my pad, but i\'m sure you\'ll live in luxury! Make yourself at home, live the life of a hollywood star, just like you are and kick some candy a**!',
     reviews: 978,
     contact: {
       email: 'theRock@jabroni.com',
@@ -24,7 +24,7 @@ const hosts = [
     verified: true,
     photo: 'https://fechostinfo.s3-us-west-1.amazonaws.com/elonMusk',
     joinDate: 'Fri Jul 28 2017 20:00:00 GMT-0600 (Mountain Daylight Time)',
-    desc: 'Welcome to my, uh, Airbnb! As everything I did, I strive for almost the best in the world. If it\'s a bit error prone, then that\'s ok. As such, my Airbnb\'s are in the 98% of the best Airbnb\'s, between Bill and I. As I travel the world, I may stop in and crash during your stay. So always be prepared for partying! Feel free to use any cars that may be in the garage, but just fill them back up with gas... ;)',
+    desc: 'Welcome to my, uh, AirBeeNKnee! As everything I did, I strive for almost the best in the world. If it\'s a bit error prone, then that\'s ok. As such, my AirBeeNKnee\'s are in the 98% of the best AirBeeNKnee\'s, between Bill and I. As I travel the world, I may stop in and crash during your stay. So always be prepared for partying! Feel free to use any cars that may be in the garage, but just fill them back up with gas... ;)',
     reviews: 3762,
     contact: {
       email: 'populateMars@tesla.com',
@@ -169,7 +169,7 @@ const otherToKnows = ['Jabroni, it\'s the Rock cave', 'Cabin near seattle, the g
         additional: ['No large events'],
       },
       health: {
-        safety: ['Committed to Airbnb\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow Airbnb\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
+        safety: ['Committed to AirBeeNKnee\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow AirBeeNKnee\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
         acknowledge: ['Security Deposit - if you damage the home, you may be charged up to $500'],
       },
       cancelPolicy: ['Free cancellation for 48hrs', 'After that, cancel before 4:00pm on Feb 12 to get 50% back, minus the service fee'],
@@ -186,7 +186,7 @@ const toKnow = [
       additional: ['No Film Productions Without Permission', 'No jumping off the balcony into the pool', 'No loud music after 2:00 AM'],
     },
     health: {
-      safety: ['Committed to Airbnb\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow Airbnb\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
+      safety: ['Committed to AirBeeNKnee\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow AirBeeNKnee\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
       acknowledge: ['Must climb stairs - There are 5 stories. The elevator is broken, so you must climb stairs to access bedrooms, kitchen, and basketball court.', 'Security Deposit - if you damage the home, you may be charged up to $500'],
     },
     cancelPolicy: ['Free cancellation for 48hrs', 'After that, cancel before 4:00pm on Feb 12 to get 50% back, minus the first night and service fee'],
@@ -199,7 +199,7 @@ const toKnow = [
       additional: ['No Jeff Bezos'],
     },
     health: {
-      safety: ['Committed to Airbnb\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow Airbnb\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
+      safety: ['Committed to AirBeeNKnee\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow AirBeeNKnee\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
       acknowledge: ['No Jeff Bezos - Do not allow Jeff Bezos on to the property', 'Security Deposit - if you damage the home, you may be charged to throw an epic party on my birthday'],
     },
     cancelPolicy: ['Free cancellation for 12hrs', 'After that, cancel before 12:00pm on Apr 3 to get 30% back, minus the service fee'],
@@ -212,7 +212,7 @@ const toKnow = [
       additional: ['No loud noise after 11 PM', 'No Candle/Fire Use', 'No Film Productions Without Permission'],
     },
     health: {
-      safety: ['Committed to Airbnb\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow Airbnb\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
+      safety: ['Committed to AirBeeNKnee\'s enhanced cleaning process.', 'During the COVID-19 pandemic, all hosts and guests must review and follow AirBeeNKnee\'s social-distancing and other COVID-19-related guidelines.', 'Carbon monoxide alarm', 'Smoke alarm'],
       acknowledge: ['Security Deposit - if you damage the home, you may be charged up to $125'],
     },
     cancelPolicy: ['Free cancellation from 1 week of booking', 'After that, cancel before 4:00pm on Feb 27 to get 50% back, minus the service fee'],
