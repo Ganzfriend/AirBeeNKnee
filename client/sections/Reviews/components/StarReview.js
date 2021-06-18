@@ -2,9 +2,16 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ProgressBar } from 'react-bootstrap';
 import StarRating from 'react-bootstrap-star-rating';
+import {makeStyles} from '@material-ui/core/styles';
+
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 
 const StarReview = ({id = 1}) => {
+  const classes = useStyles();
+
   const [ratings, setRatings] = useState({});
 
   useEffect(() => {
@@ -23,14 +30,14 @@ const StarReview = ({id = 1}) => {
   }
   return (
     <div>
-      <div id='reviews-grid'>
+      <div className={classes.reviewsGrid}>
         <div>
           {categories.slice(0, 3).map((cat, i) => (
             <div key={cat}>
-              <div className='cat-name' key={cat}>{cat}</div>
-              <div id='cat-progress-bar'>
+              <div className={classes.catName} key={cat}>{cat}</div>
+              <div className={classes.catProgressBar}>
                 <ProgressBar variant='custom' now={catRates[i] * 20} />
-                <div id='progress-count' >{catRates[i]}</div>
+                <div className={classes.progressCount} >{catRates[i]}</div>
               </div>
             </div>
           ))}
@@ -38,10 +45,10 @@ const StarReview = ({id = 1}) => {
         <div>
           {categories.slice(3).map((cat, i) => (
             <div key={cat}>
-              <div className='cat-name' key={cat}>{cat}</div>
-              <div id='cat-progress-bar'>
+              <div className={classes.catName} key={cat}>{cat}</div>
+              <div className={classes.catProgressBar}>
                 <ProgressBar variant='custom' now={catRates[i + 3] * 20} />
-                <div id='progress-count' >{catRates[i + 3]}</div>
+                <div className={classes.progressCount} >{catRates[i + 3]}</div>
               </div>
             </div>
           ))}
