@@ -43,7 +43,7 @@ const ToKnowModal = ({ whatToKnow, show, close }) => {
           <CloseIcon fontSize='small' className={classes.svg} />
         </button>
       </div>
-      <Body>
+      <Body className={classes.knowModalContent}>
         <Title>{title}</Title>
         {mainShow}
         <div id='modal-subtitle' className={classes.modalSubtitle}>
