@@ -10,13 +10,15 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
-import { airbnbLogo } from '../../icons.js';
-import styles from '../styles.js';
+// import { airbnbLogo } from '../../icons.js';
+import icons from '../../icons.js';
+import styles from '../../styles.js';
 
 const useStyles = makeStyles(styles);
 
 const TopBar = () => {
   const classes = useStyles();
+  const {airbnbLogo} = icons;
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
@@ -98,8 +100,8 @@ const TopBar = () => {
   );
 
   return (
-    <div className={classes.topBarGrow}>
-      <AppBar position="static">
+    <div>
+      <AppBar position="static" className={classes.topBar}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -109,7 +111,7 @@ const TopBar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <img src={airbnbLogo.src} alt="Airbnb logo" />
+          <img src={airbnbLogo.src} alt="Airbnb logo" height="30px" width="30px" />
           <Typography className={classes.topBarTitle} variant="h6" noWrap>
             AirBeeNKnee
           </Typography>
@@ -128,17 +130,17 @@ const TopBar = () => {
           </div>
           <div className={classes.topBarGrow} />
           <div className={classes.topBarSectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
               </Badge>
-            </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
+            </IconButton> */}
+            {/* <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
-            <IconButton
+            </IconButton> */}
+            {/* <IconButton
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
@@ -147,7 +149,7 @@ const TopBar = () => {
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton> */}
           </div>
           <div className={classes.topBarSectionMobile}>
             <IconButton

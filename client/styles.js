@@ -6,10 +6,15 @@ const styles = (theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  topBarGrow: {
+  topBar: {
     flexGrow: 1,
+    backgroundColor: "#FFF",
+    height: 100,
+    display: "flex",
+    justifyContent: "center",
+    // boxShadow: ,
   },
-  topBarmenuButton: {
+  topBarMenuButton: {
     marginRight: theme.spacing(2),
   },
   topBarTitle: {
@@ -176,6 +181,201 @@ const styles = (theme) => ({
   //   fontWeight: "bold",
   //   textDecoration: "underline",
   // },
+  reviewsBody: {
+    fontFamily: "Airbnb Cereal App Light",
+    // margin: '10px 10% 0 10%',
+  },
+  optBtn: {
+    margin: "0 0 20px 10px",
+    backgroundColor: "white",
+    border: "1px solid rgb(168, 168, 168)",
+    borderRadius: 20,
+    padding: "0 15px 0 15px",
+    height: 30,
+    fontSize: 13,
+    outline: "none",
+    "&:hover": {
+      cursor: "pointer",
+      border: "1px solid black",
+    },
+  },
+  cardContainer: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))",
+    gridGap: 20,
+  },
+  reviewsCard: {
+    backgroundColor: "rgb(235, 228, 247)",
+    border: "1px solid gray",
+    padding: 10,
+    borderRadius: 10,
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    "&:hover": {
+      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+    },
+  },
+  reviewsTitle: {
+    marginLeft: 5,
+    fontFamily: "Airbnb Cereal App Medium",
+    fontSize: 20,
+    verticalAlign: "-4px",
+  },
+  rvwsStar: {
+    color: "red",
+    fontSize: 22,
+  },
+  reviewsGrid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+  },
+  catName: {
+    fontSize: 17,
+    marginBottom: 15,
+  },
+  catProgressBar: {
+    display: "table",
+    position: "relative",
+  },
+  catProgBarProgress: {
+    height: 4,
+    width: 140,
+    position: "absolute",
+    top: "-2.3vw",
+    left: "25vw",
+    backgroundColor: "black",
+  },
+  // catProgressBar progress: {
+  //   height: 4,
+  //   width: 140,
+  //   position: 'absolute',
+  //   top: '-2.3vw',
+  //   left: '25vw',
+  // },
+  // catProgressBar progressBar, rvwMdlBars progressBar: {
+  //   backgroundColor: 'black',
+  // },
+  rvwMdlBarsProgressBar: {
+    height: 4,
+    width: 140,
+    marginTop: 26,
+    backgroundColor: "black",
+  },
+  progressCount: {
+    top: "-3vw",
+    left: "35.5vw",
+    display: "table-cell",
+    paddingLeft: 20,
+    position: "absolute",
+  },
+  buttonNum: {
+    display: "inline-block",
+    fontFamily: "Airbnb Cereal App Book",
+    fontSize: 14,
+  },
+  reviewsContainer: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+  },
+  reviewerTitleBarImg: {
+    height: 70,
+    width: 70,
+    border: "0 solid white",
+    borderRadius: "50%",
+  },
+  reviewerTitleInfo: {
+    display: "inline-block",
+    height: 70,
+    verticalAlign: "-12px",
+    marginLeft: 15,
+  },
+  reviewTitleName: {
+    fontSize: 16,
+    fontFamily: "Airbnb Cereal App Medium",
+  },
+  reviewTitleJoin: {
+    color: "rgb(168, 168, 168)",
+  },
+  reviewBody: {
+    marginRight: 40,
+  },
+  showRevsBtn: {
+    border: "1px solid black",
+    backgroundColor: "white",
+    borderRadius: 7,
+    padding: "8px 13px 8px 13px",
+    fontSize: 15,
+    fontFamily: "Airbnb Cereal app Medium",
+    outline: "none",
+    "&:hover": {
+      backgroundColor: "rgb(240, 240, 240)",
+    },
+  },
+  rvwModal: {
+    width: "85vw",
+    maxWidth: "85vw",
+  },
+  rvwModalContent: {
+    borderRadius: 13,
+  },
+  rvwMdlCloseBtn: {
+    marginTop: 10,
+    marginLeft: 10,
+    height: 35,
+    border: "1px solid white",
+    borderRadius: "50%",
+    backgroundColor: "white",
+    outline: "none",
+    "&:hover": {
+      backgroundColor: "rgb(240, 240, 240)",
+    },
+  },
+  rvwMdlGrid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 2fr",
+  },
+  rvwModalStars: {
+    color: "red",
+    fontSize: 35,
+  },
+  rvwModalTitle: {
+    fontSize: 30,
+    position: "absolute",
+  },
+  rvwMdlBars: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    paddingRight: 50,
+    marginTop: 10,
+    fontSize: 15,
+  },
+  rvwMdlCatDiv: {
+    marginTop: 10,
+    fontSize: 15,
+  },
+  rvwMdlProgress: {
+    display: "inline-block",
+  },
+  rvwMdlBarRtg: {
+    marginLeft: "13%",
+    display: "table-cell",
+    paddingLeft: 20,
+    position: "absolute",
+  },
+  rvwModalSrch: {
+    top: "6%",
+    border: "0px solid white",
+    borderRadius: "25%",
+  },
+  rvwSrchBox: {
+    backgroundColor: "rgb(240, 240, 240)",
+    boxShadow: "none",
+  },
+  rvwMdlReviews: {
+    marginTop: 10,
+    padding: 60,
+    maxHeight: 450,
+    overflow: "scroll",
+  },
   hostBody: {
     fontFamily: "Airbnb Cereal App Light",
   },
@@ -429,201 +629,6 @@ const styles = (theme) => ({
   // locmodal .modal-content: {
   //   borderRadius: 0% !important,
   // },
-  reviewsBody: {
-    fontFamily: "Airbnb Cereal App Light",
-    // margin: '10px 10% 0 10%',
-  },
-  optBtn: {
-    margin: "0 0 20px 10px",
-    backgroundColor: "white",
-    border: "1px solid rgb(168, 168, 168)",
-    borderRadius: 20,
-    padding: "0 15px 0 15px",
-    height: 30,
-    fontSize: 13,
-    outline: "none",
-    "&:hover": {
-      cursor: "pointer",
-      border: "1px solid black",
-    },
-  },
-  cardContainer: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))",
-    gridGap: 20,
-  },
-  reviewsCard: {
-    backgroundColor: "rgb(235, 228, 247)",
-    border: "1px solid gray",
-    padding: 10,
-    borderRadius: 10,
-    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-    "&:hover": {
-      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-    },
-  },
-  reviewsTitle: {
-    marginLeft: 5,
-    fontFamily: "Airbnb Cereal App Medium",
-    fontSize: 20,
-    verticalAlign: "-4px",
-  },
-  rvwsStar: {
-    color: "red",
-    fontSize: 22,
-  },
-  reviewsGrid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-  },
-  catName: {
-    fontSize: 17,
-    marginBottom: 15,
-  },
-  catProgressBar: {
-    display: "table",
-    position: "relative",
-  },
-  catProgBarProgress: {
-    height: 4,
-    width: 140,
-    position: "absolute",
-    top: "-2.3vw",
-    left: "25vw",
-    backgroundColor: "black",
-  },
-  // catProgressBar progress: {
-  //   height: 4,
-  //   width: 140,
-  //   position: 'absolute',
-  //   top: '-2.3vw',
-  //   left: '25vw',
-  // },
-  // catProgressBar progressBar, rvwMdlBars progressBar: {
-  //   backgroundColor: 'black',
-  // },
-  rvwMdlBarsProgressBar: {
-    height: 4,
-    width: 140,
-    marginTop: 26,
-    backgroundColor: "black",
-  },
-  progressCount: {
-    top: "-3vw",
-    left: "35.5vw",
-    display: "table-cell",
-    paddingLeft: 20,
-    position: "absolute",
-  },
-  buttonNum: {
-    display: "inline-block",
-    fontFamily: "Airbnb Cereal App Book",
-    fontSize: 14,
-  },
-  reviewsContainer: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-  },
-  reviewerTitleBarImg: {
-    height: 70,
-    width: 70,
-    border: "0 solid white",
-    borderRadius: "50%",
-  },
-  reviewerTitleInfo: {
-    display: "inline-block",
-    height: 70,
-    verticalAlign: "-12px",
-    marginLeft: 15,
-  },
-  reviewTitleName: {
-    fontSize: 16,
-    fontFamily: "Airbnb Cereal App Medium",
-  },
-  reviewTitleJoin: {
-    color: "rgb(168, 168, 168)",
-  },
-  reviewBody: {
-    marginRight: 40,
-  },
-  showRevsBtn: {
-    border: "1px solid black",
-    backgroundColor: "white",
-    borderRadius: 7,
-    padding: "8px 13px 8px 13px",
-    fontSize: 15,
-    fontFamily: "Airbnb Cereal app Medium",
-    outline: "none",
-    "&:hover": {
-      backgroundColor: "rgb(240, 240, 240)",
-    },
-  },
-  rvwModal: {
-    width: "85vw",
-    maxWidth: "85vw",
-  },
-  rvwModalContent: {
-    borderRadius: 13,
-  },
-  rvwMdlCloseBtn: {
-    marginTop: 10,
-    marginLeft: 10,
-    height: 35,
-    border: "1px solid white",
-    borderRadius: "50%",
-    backgroundColor: "white",
-    outline: "none",
-    "&:hover": {
-      backgroundColor: "rgb(240, 240, 240)",
-    },
-  },
-  rvwMdlGrid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 2fr",
-  },
-  rvwModalStars: {
-    color: "red",
-    fontSize: 35,
-  },
-  rvwModalTitle: {
-    fontSize: 30,
-    position: "absolute",
-  },
-  rvwMdlBars: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    paddingRight: 50,
-    marginTop: 10,
-    fontSize: 15,
-  },
-  rvwMdlCatDiv: {
-    marginTop: 10,
-    fontSize: 15,
-  },
-  rvwMdlProgress: {
-    display: "inline-block",
-  },
-  rvwMdlBarRtg: {
-    marginLeft: "13%",
-    display: "table-cell",
-    paddingLeft: 20,
-    position: "absolute",
-  },
-  rvwModalSrch: {
-    top: "6%",
-    border: "0px solid white",
-    borderRadius: "25%",
-  },
-  rvwSrchBox: {
-    backgroundColor: "rgb(240, 240, 240)",
-    boxShadow: "none",
-  },
-  rvwMdlReviews: {
-    marginTop: 10,
-    padding: 60,
-    maxHeight: 450,
-    overflow: "scroll",
-  },
 });
 
 export default styles;
