@@ -4,9 +4,16 @@ import Moment from 'moment';
 import TitleBar from './TitleBar.jsx';
 import CloseIcon from '@material-ui/icons/Close';
 import SearchIcon from '@material-ui/icons/Search';
+import {makeStyles} from '@material-ui/core/styles';
+
+import styles from '../../../styles.js';
+
+const useStyles = makeStyles(styles);
 
 
 const ReviewModal = ({ ratings, reviews, show, setModal }) => {
+  const classes = useStyles();
+
   const [query, setQuery] = useState('');
 
   let categories = [];
@@ -24,26 +31,26 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
         onHide={() => setModal(false)}
         centered
         animation
-        dialogClassName='rvw-modal'
+        dialogClassName={classes.rvwModal}
       >
-        <div id='rvw-mdl-close'>
+        <div className={classes.rvwMdlClose}>
           <button type='button' onClick={() => setModal(false)}>
             <CloseIcon fontSize='small' />
           </button>
         </div>
         <Modal.Body>
-          <div id='rvw-mdl-grid'>
+          <div className={classes.rvwMdlGrid}>
             <div>
               <TitleBar ratings={ratings} />
-              <div id='rvw-mdl-bars'>
-                <div id='rvw-mdl-cat'>
+              <div className={classes.rvwMdlBars}>
+                <div className={classes.rvwMdlCat}>
                   {categories.map(cat => <div key={cat}>{cat}</div>)}
                 </div>
-                <div id='rvw-mdl-progress'>
+                <div className={classes.rvwMdlProgress}>
                   {catRates.map(rate => (
                     <div key={rate}>
                       <ProgressBar now={rate * 20}/>
-                      <div id='rvw-mdl-bar-rtg'>{rate}</div>
+                      <div className={classes.rvwMdlBarRtg}>{rate}</div>
                     </div>
                   ))}
                 </div>
@@ -52,27 +59,28 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
               {/* Buttons */}
             </div>
             <div>
-              <InputGroup id='rvw-modal-srch'>
+              <InputGroup id='rvw-modal-srch' className={classes.rvwModalSrch}>
                 <InputGroup.Prepend>
-                  <InputGroup.Text id="srch-icon"><SearchIcon /></InputGroup.Text>
+                  <InputGroup.Text id="srch-icon" className={classes.srchIcon}><SearchIcon /></InputGroup.Text>
                 </InputGroup.Prepend>
                 <FormControl
                   placeholder='Search'
                   id='rvw-srch-box'
+                  className={classes.rvwSrchBox}
                   onChange={(e) => setQuery(e.target.value)}
                 />
               </InputGroup>
-              <div id='rvw-mdl-reviews'>
+              <div className={classes.rvwMdlReviews}>
                 {reviews.map(({ review }) => (
                   <div key={review.name}>
-                    <div className='reviewer-title-bar'>
+                    <div className={classes.reviewerTitleBar}>
                       <img src='https://source.unsplash.com/random/100x100/?person' alt='' />
-                      <div id='reviewer-title-info'>
-                        <div id='review-title-name' >{review.name.split(' ')[0]}</div>
-                        <div id='review-title-joined' >{Moment(new Date(review.created_at)).format('MMMM YYYY')}</div>
+                      <div className={classes.reviewerTitleInfo}>
+                        <div className={classes.reviewTitleName} >{review.name.split(' ')[0]}</div>
+                        <div className={classes.reviewTitleJoined} >{Moment(new Date(review.created_at)).format('MMMM YYYY')}</div>
                       </div>
                     </div>
-                    <div id='review-body' >{review.body}</div>
+                    <div className={classes.reviewBody} >{review.body}</div>
                     <br />
                     <br />
                   </div>
