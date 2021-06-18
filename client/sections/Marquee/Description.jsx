@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Typography } from '@material-ui/core';
+import { Modal, Button } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 
 import styles from '../../styles.js';
@@ -24,16 +24,16 @@ const Description = ({ listing }) => {
   }
   return (
     <div>
-      <p>
+      <div className={classes.marqueeReadDescription}>
         {description?.substr(0, 200)}
         ...
-        <Typography
+        <Button
           onClick={handleOpen}
-          className={classes.marqueeReadDescriptionButton}
+          // className={classes.marqueeReadDescriptionButton}
         >
-          <b><u>read more</u></b>
-        </Typography>
-      </p>
+          <u>Show more</u>
+        </Button>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}

@@ -67,10 +67,11 @@ const styles = (theme) => ({
       display: "none",
     },
   },
-  // marqueeApp: {
-  //   width: "80vw",
-  //   height: "80vh",
-  // },
+  marqueeApp: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 30,
+  },
   // marqueeSubmodulesDiv: {
   //   width: 600,
   // },
@@ -138,6 +139,12 @@ const styles = (theme) => ({
     borderRadius: "50%",
     border: "none",
   },
+  marqueeReadDescription: {
+    display: "flex",
+    alignItems: "center",
+    width: "35vw",
+    flexWrap: "wrap",
+  },
   marqueeDescriptionModal: {
     display: "flex",
     justifyContent: "center",
@@ -150,29 +157,32 @@ const styles = (theme) => ({
     background: "seashell",
   },
   marqueeSleepingCard: {
-    width: 150,
-    height: 125,
-    borderRadius: "10%",
-    border: "1px solid lightgray",
-    margin: 5,
-    padding: 10,
+    // width: 180,
+    // height: 135,
+    borderRadius: "7%",
+    border: ".5px solid lightgray",
+    margin: 10,
+    padding: "20px 80px 20px 20px",
   },
   marqueeSleepingFlexbox: {
     display: "flex",
   },
-  marqueeReadDescriptionButton: {
-    fontWeight: "bold",
-    "&:hover": {
-      cursor: "pointer",
-    },
+  amenities: {
+    display: "flex",
+    gap: 20,
+    alignItems: "center",
   },
+  // marqueeReadDescriptionButton: {
+  //   fontWeight: "bold",
+  //   textDecoration: "underline",
+  // },
   hostBody: {
     fontFamily: "Airbnb Cereal App Light",
   },
-  // hr: {
-  //   fontSize: 40px,
-  //   border: .001em solid rgb(230, 230, 230),
-  // },
+  hr: {
+    fontSize: 40,
+    border: ".001em solid rgb(230, 230, 230)",
+  },
   locTitle: {
     fontFamily: "Airbnb Cereal App Medium",
     marginTop: "30px",

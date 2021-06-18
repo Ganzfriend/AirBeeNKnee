@@ -17,8 +17,8 @@ const App = () => {
     <div className={classes.appBody}>
       <div style={{margin: "100px 10% 0 10%"}}>
         <Marquee />
-        <HostInfo />
         <Reviews />
+        <HostInfo />
       </div>
       <RelatedInfo />
     </div>

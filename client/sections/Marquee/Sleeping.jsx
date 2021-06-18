@@ -17,7 +17,7 @@ const Sleeping = ({ listing }) => {
   var roomNum = 1;
   return (
     <div>
-      <h2>Sleeping arrangements</h2>
+      <h2>Places for sleeping</h2>
       <div className={classes.marqueeSleepingFlexbox}>
         {bedrooms?.map((bedroom, i) => (
           <div className={classes.marqueeSleepingCard} key={i} >

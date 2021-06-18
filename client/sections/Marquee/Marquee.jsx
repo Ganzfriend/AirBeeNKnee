@@ -35,25 +35,20 @@ const Marquee = () => {
   }, []);
 
   return (
-    <div className={classes.marqueeApp}>
-      {displayRecord ? (
-      <div>
+    <div>
+      {!!displayRecord && (
+      <div className={classes.marqueeApp}>
         <Title listing={displayRecord} />
         <PhotoGrid listing={displayRecord} />
-        <div className={classes.marqueeSubmodulesDiv}>
-          <Divider />
-          <Policies listing={displayRecord} />
-          <Divider />
-          <Description listing={displayRecord} />
-          <Divider />
-          <Sleeping listing={displayRecord} />
-          <Divider />
-          <Amenities listing={displayRecord} />
-        </div>
-      </div>
-      )
-      : <div></div>
-      }
+        <Divider />
+        <Policies listing={displayRecord} />
+        <Divider />
+        <Description listing={displayRecord} />
+        <Divider />
+        <Sleeping listing={displayRecord} />
+        <Divider />
+        <Amenities listing={displayRecord} />
+      </div>)}
     </div>
   );
 };
