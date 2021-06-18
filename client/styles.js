@@ -543,7 +543,7 @@ const styles = (theme) => ({
     fontFamily: "Airbnb Cereal app Medium",
     outline: "none",
     "&:hover": {
-      backgroundColor: rgb(240, 240, 240),
+      backgroundColor: "rgb(240, 240, 240)",
     },
   },
   rvwModal: {
