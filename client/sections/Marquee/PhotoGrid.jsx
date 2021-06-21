@@ -70,7 +70,6 @@ const PhotoGrid = ({ listing }) => {
             className={classes.photoButton}
             onClick={handleOpen}
             variant="contained"
-            color="default"
           >
             Show all photos
           </Button>

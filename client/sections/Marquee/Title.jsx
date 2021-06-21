@@ -10,12 +10,12 @@ const Title = ({ listing }) => {
   return (
     <div>
       <h2>{title}</h2>
-      <h3>
-        <StarIcon />
-        {rating}
-        -
-        {location}
-      </h3>
+        <h4>
+        <StarIcon fontSize="small" style={{color: "#FF385C" }} />
+          {rating}
+          -
+          {location}
+        </h4>
     </div>
   );
 };

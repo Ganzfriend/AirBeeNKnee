@@ -130,6 +130,7 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     height: 40,
     width: "auto",
     borderRadius: 8,
+    backgroundColor: "white",
   },
   marqueePhotoModal: {
     display: "flex",
