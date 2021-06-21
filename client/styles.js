@@ -149,8 +149,8 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
   marqueePhotoModalBackButton: {
     display: "block",
     position: "absolute",
-    left: 10,
-    top: 10,
+    left: 20,
+    top: 20,
     height: 50,
     width: 50,
     borderRadius: "50%",
@@ -166,12 +166,13 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "80%",
-    height: "60%",
+    width: "60%",
+    height: "auto",
     padding: 30,
     margin: "auto",
     marginTop: 30,
-    background: "seashell",
+    background: "white",
+    borderRadius: 20,
   },
   marqueeSleepingCard: {
     // width: 180,
@@ -237,7 +238,7 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     verticalAlign: "-4px",
   },
   rvwsStar: {
-    color: "red",
+    color: "#FF385C",
     fontSize: 22,
   },
   reviewsGrid: {
@@ -252,13 +253,17 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     display: "table",
     position: "relative",
   },
+  // ratingProgBar: {
+  //   background: "black",
+  // },
   catProgBarProgress: {
     height: 4,
     width: 140,
     position: "absolute",
     top: "-2.3vw",
     left: "25vw",
-    backgroundColor: "black",
+    backgroundColor: "lightgray",
+    color: "black",
   },
   // catProgressBar progress: {
   //   height: 4,
@@ -287,6 +292,7 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     display: "inline-block",
     fontFamily: "Airbnb Cereal App Book",
     fontSize: 14,
+    marginLeft: 5,
   },
   reviewsContainer: {
     display: "grid",
@@ -479,6 +485,7 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
   hostButton: {
     margin: "0 0 20px 0",
     backgroundColor: "white",
+    color: "black",
     border: "1px solid black",
     borderRadius: "10px",
     fontFamily: "Airbnb Cereal App Medium",
