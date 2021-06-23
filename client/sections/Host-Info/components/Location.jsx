@@ -46,9 +46,9 @@ const Location = ({ id }) => {
       <div className={classes.wrapper}>
         {!isShown && <div id="map" className={classes.map, classes.wrapperMap} />}
         <div className={classes.locNotice}>Exact location provided after booking</div>
-        <div id="transit" className={classes.selTransit}>
-          <label htmlFor='transit'>
-            <input id='transit' type='checkbox' value='Transit' />
+        <div className={classes.selTransit}>
+          <label htmlFor='transitMdl'>
+            <input id='transitMdl' className={classes.transit} type='checkbox' value='TransitMdl' />
             <div className={classes.publicTransit}>Public Transit</div>
           </label>
         </div>
@@ -121,7 +121,7 @@ const Location = ({ id }) => {
                   <div className={classes.locNotice, classes.locNoticeModal}>Exact location provided after booking</div>
                   <div className={classes.selTransit, classes.selTransitModal}>
                     <label htmlFor='transit'>
-                      <input id='transit' type='checkbox' value='Transit' />
+                      <input id='transit' className={classes.transit} type='checkbox' value='Transit' />
                       <div className={classes.publicTransit}>Public Transit</div>
                     </label>
                   </div>
