@@ -21,6 +21,11 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     // display: "flex",
     // alignItems: "center",
   },
+  topBarLogo: {
+    transform: "rotate(180deg)",
+    height: 40,
+    width: 42,
+  },
   topBarMenuButton: {
     marginRight: spacing(2),
   },
