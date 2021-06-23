@@ -10,18 +10,18 @@ import styles from '../../../styles.js';
 const useStyles = makeStyles(styles);
 
 
-const Review = ({ reviews, id = 1 }) => {
+const Review = ({ ratings, reviews, id = 1 }) => {
   const classes = useStyles();
 
   const [modal, setModal] = useState(false);
 
-  const [ratings, setRatings] = useState({});
+  // const [ratings, setRatings] = useState(null);
 
-  useEffect(() => {
-    axios.get(`/rating/${id}`)
-      .then(({ data }) => setRatings(data))
-      .catch(err => console.log(err));
-  }, [id]);
+  // useEffect(() => {
+  //   axios.get(`/rating/${id}`)
+  //     .then(({ data }) => setRatings(data))
+  //     .catch(err => console.log(err));
+  // }, [id]);
 
   return reviews !== [] ? (
     <div>
@@ -69,7 +69,9 @@ const Review = ({ reviews, id = 1 }) => {
       <button id='show-revs-btn' className={classes.showRevsBtn} onClick={() => setModal(true)}>{`Show all ${reviews.length} reviews`}</button>
       <br />
       <br />
-      <ReviewModal ratings={ratings} reviews={reviews} show={modal} setModal={setModal} />
+      {!!ratings && (
+        <ReviewModal ratings={ratings} reviews={reviews} show={modal} setModal={setModal} />
+      )}
     </div>
   ) : <div>Loading...</div>;
 };

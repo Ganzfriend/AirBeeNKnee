@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Modal, InputGroup, FormControl, ProgressBar } from 'react-bootstrap';
 import Moment from 'moment';
-import TitleBar from './TitleBar.jsx';
 import CloseIcon from '@material-ui/icons/Close';
 import SearchIcon from '@material-ui/icons/Search';
 import {makeStyles} from '@material-ui/core/styles';
+import {IconButton} from '@material-ui/core';
+
+import TitleBar from './TitleBar.jsx';
+
 
 import styles from '../../../styles.js';
 
@@ -34,9 +37,9 @@ const ReviewModal = ({ ratings, reviews, show, setModal }) => {
         dialogClassName={classes.rvwModal}
       >
         <div className={classes.rvwMdlClose}>
-          <button type='button' onClick={() => setModal(false)}>
+          <IconButton onClick={() => setModal(false)}>
             <CloseIcon fontSize='small' />
-          </button>
+          </IconButton>
         </div>
         <Modal.Body className={classes.rvwModalContent}>
           <div className={classes.rvwMdlGrid}>

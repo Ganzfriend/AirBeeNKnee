@@ -7,18 +7,8 @@ import styles from '../../../styles.js';
 
 const useStyles = makeStyles(styles);
 
-const Title = ({ id }) => {
+const Title = ({ ratings }) => {
   const classes = useStyles();
-
-  const [ratings, setRatings] = useState({});
-
-  useEffect(() => {
-    axios.get(`/rating/${id}`)
-      .then(({ data }) => {
-        setRatings(data);
-      })
-      .catch(err => console.log(err));
-  }, [id]);
 
   let total, average;
   if (ratings.starReview) {

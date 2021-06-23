@@ -15,6 +15,7 @@ const Reviews = ({id = 1}) => {
   const classes = useStyles();
 
   const [reviews, setReviews] = useState([]);
+  const [ratings, setRatings] = useState({});
 
   const getReviews = () => {
     axios.get('/review')
@@ -24,17 +25,23 @@ const Reviews = ({id = 1}) => {
 
   useEffect(() => {getReviews()}, []);
 
+  useEffect(() => {
+    axios.get(`/rating/${id}`)
+      .then(({ data }) => setRatings(data))
+      .catch(err => console.log(err));
+  }, [id]);
+
   return (
       <div id="reviews-body" className={classes.reviewsBody}>
         <br />
         <hr />
-        <Title id={id} />
+        <Title ratings={ratings} />
         <br />
         <StarReview id={id} />
         <br />
         <Options id={id} />
         <br /><br />
-        <Review reviews={reviews} id={id} />
+        <Review ratings={ratings} reviews={reviews} id={id} />
       </div>
     );
 };

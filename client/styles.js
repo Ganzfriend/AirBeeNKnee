@@ -279,7 +279,7 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     height: 4,
     width: 140,
     marginTop: 26,
-    backgroundColor: "black",
+    backgroundColor: "lightgray",
   },
   progressCount: {
     top: "-3vw",
