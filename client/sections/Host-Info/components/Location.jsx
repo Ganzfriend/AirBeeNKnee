@@ -44,9 +44,9 @@ const Location = ({ id }) => {
       <hr />
       <h4 className={classes.locTitle}>Location</h4>
       <div className={classes.wrapper}>
-        {!isShown && <div className={classes.map, classes.wrapperMap} />}
+        {!isShown && <div id="map" className={classes.map, classes.wrapperMap} />}
         <div className={classes.locNotice}>Exact location provided after booking</div>
-        <div className={classes.selTransit}>
+        <div id="transit" className={classes.selTransit}>
           <label htmlFor='transit'>
             <input id='transit' type='checkbox' value='Transit' />
             <div className={classes.publicTransit}>Public Transit</div>
@@ -117,7 +117,7 @@ const Location = ({ id }) => {
                 </div>
               </div>
               <div>
-                <div className={classes.map, classes.locInfoMap}>
+                <div id="map" className={classes.map, classes.locInfoMap}>
                   <div className={classes.locNotice, classes.locNoticeModal}>Exact location provided after booking</div>
                   <div className={classes.selTransit, classes.selTransitModal}>
                     <label htmlFor='transit'>
