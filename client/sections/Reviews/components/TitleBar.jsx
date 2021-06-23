@@ -10,7 +10,8 @@ const useStyles = makeStyles(styles);
 const Title = ({ ratings }) => {
   const classes = useStyles();
 
-  let total, average;
+  let total = 0;
+  let average = 0;
   if (ratings.starReview) {
     const stars = Object.values(ratings.starReview);
     total = stars.reduce((m, i) => m += i, 0);
@@ -24,7 +25,9 @@ const Title = ({ ratings }) => {
       <br />
       <StarIcon id='rvws-star' className={classes.rvwsStar}/>
       <div id='reviews-title' className={classes.reviewsTitle}>
-        <div>{`${average} (${total} reviews)`}</div>
+        { !!ratings &&
+          <div>{`${average} (${total} reviews)`}</div>
+        }
       </div>
     </div>
   );

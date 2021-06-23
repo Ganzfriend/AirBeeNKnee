@@ -15,14 +15,6 @@ const Review = ({ ratings, reviews, id = 1 }) => {
 
   const [modal, setModal] = useState(false);
 
-  // const [ratings, setRatings] = useState(null);
-
-  // useEffect(() => {
-  //   axios.get(`/rating/${id}`)
-  //     .then(({ data }) => setRatings(data))
-  //     .catch(err => console.log(err));
-  // }, [id]);
-
   return reviews !== [] ? (
     <div>
       <div className={classes.reviewsContainer}>

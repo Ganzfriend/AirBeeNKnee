@@ -9,18 +9,8 @@ import styles from '../../../styles.js';
 const useStyles = makeStyles(styles);
 
 
-const StarReview = ({ id }) => {
+const StarReview = ({ ratings }) => {
   const classes = useStyles();
-
-  const [ratings, setRatings] = useState({});
-
-  useEffect(() => {
-    axios.get(`/rating/${id}`)
-      .then(({ data }) => {
-        setRatings(data);
-      })
-      .catch(err => console.log(err));
-  }, [id]);
 
   let categories = [];
   let catRates = [];

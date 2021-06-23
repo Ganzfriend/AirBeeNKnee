@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import CloseIcon from '@material-ui/icons/Close';
 import {makeStyles} from '@material-ui/core/styles';
+import { IconButton } from '@material-ui/core';
 
 import Health from './Health.jsx';
 import Rules from './Rules.jsx';
@@ -38,13 +39,13 @@ const ToKnowModal = ({ whatToKnow, show, close }) => {
       centered
       animation
     >
-      <div id="close-modal" className={classes.closeModal}>
-        <button className={classes.hostButton, classes.closeModalBtn, classes.btnSvg} type='button' onClick={close}>
-          <CloseIcon fontSize='small' className={classes.svg} />
-        </button>
+      <div id="close-modal" className={classes.modalTitleAndClose}>
+        <Title>{title}</Title>
+        <IconButton onClick={close}>
+          <CloseIcon fontSize='small' />
+        </IconButton>
       </div>
       <Body className={classes.knowModalContent}>
-        <Title>{title}</Title>
         {mainShow}
         <div id='modal-subtitle' className={classes.modalSubtitle}>
           {subTitle}
