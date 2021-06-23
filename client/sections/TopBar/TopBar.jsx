@@ -118,7 +118,7 @@ const TopBar = ({searchListing}) => {
                 >
                   <MenuIcon />
                 </IconButton>
-                <img src={airbnbLogo.src} alt="Airbnb logo" height="40px" width="42px" />
+                <img src={airbnbLogo.src} alt="Airbnb logo" className={classes.topBarLogo} />
                 <Typography className={classes.topBarTitle} variant="h5" noWrap>
                   AirBeeNKnee
                 </Typography>

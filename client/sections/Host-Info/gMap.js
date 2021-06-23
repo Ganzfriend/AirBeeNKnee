@@ -10,7 +10,6 @@ const initMap = (query = "Austin, Texas, United States") => {
   const geocoder = new google.maps.Geocoder();
   geocoder.geocode({ address: query }, (results, status) => {
     if (status === google.maps.GeocoderStatus.OK) {
-      console.log("#results: ", results);
       loc.lat = results[0].geometry.location.lat();
       loc.lng = results[0].geometry.location.lng();
 
