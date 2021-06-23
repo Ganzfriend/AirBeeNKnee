@@ -43,6 +43,11 @@ const initMap = (query = "Austin, Texas, United States") => {
         !transitShown ? transit.setMap(map) : transit.setMap(null);
         transitShown = !transitShown;
       });
+
+      document.getElementById("transitMdl").addEventListener("click", () => {
+        !transitShown ? transit.setMap(map) : transit.setMap(null);
+        transitShown = !transitShown;
+      });
     } else {
       console.log("error");
       console.log(results, status);
