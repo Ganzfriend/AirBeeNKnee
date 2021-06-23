@@ -47,8 +47,8 @@ const Location = ({ id }) => {
         {!isShown && <div id="map" className={classes.map, classes.wrapperMap} />}
         <div className={classes.locNotice}>Exact location provided after booking</div>
         <div className={classes.selTransit}>
-          <label htmlFor='transitMdl'>
-            <input id='transitMdl' className={classes.transit} type='checkbox' value='TransitMdl' />
+          <label htmlFor='transit'>
+            <input id='transit' className={classes.transit} type='checkbox' value='Transit' />
             <div className={classes.publicTransit}>Public Transit</div>
           </label>
         </div>
