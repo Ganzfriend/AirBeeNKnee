@@ -1,5 +1,6 @@
 const initMap = (query = "Austin, Texas, United States") => {
   console.log(query);
+
   const loc = {
     lat: 0,
     lng: 0,
@@ -31,8 +32,8 @@ const initMap = (query = "Austin, Texas, United States") => {
       console.log("Map loaded");
 
       new google.maps.Marker({
-        position: loc,
         map,
+        position: loc,
       });
       const transit = new google.maps.TransitLayer();
       let transitShown = false;
