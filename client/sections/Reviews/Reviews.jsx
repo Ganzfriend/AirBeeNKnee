@@ -37,7 +37,7 @@ const Reviews = ({id = 1}) => {
         <hr />
         <Title ratings={ratings} />
         <br />
-        <StarReview id={id} />
+        <StarReview ratings={ratings} />
         <br />
         <Options id={id} />
         <br /><br />

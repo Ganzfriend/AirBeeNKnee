@@ -621,22 +621,14 @@ const styles = ({ spacing, breakpoints, shape, palette, transitions }) => ({
     marginTop: 10,
     verticalAlign: "-7px",
   },
-  closeModal: {
-    marginTop: 7,
-    marginLeft: 7,
-    height: 40,
+  modalTitleAndClose: {
+    display: "flex",
+    justifyContent: "space-between",
+    margin: "15px 0 0 15px",
+    alignItems: "center",
   },
   knowModalContent: {
     borderRadius: 15,
-  },
-  closeModalBtn: {
-    border: "1px solid white",
-    borderRadius: "50%",
-    width: 40,
-    height: 40,
-  },
-  btnSvg: {
-    marginLeft: "-9px",
   },
   modalTitle: {
     fontFamily: "Airbnb Cereal App Medium",
