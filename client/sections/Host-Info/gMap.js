@@ -39,12 +39,10 @@ const initMap = (query = "Austin, Texas, United States") => {
       const transit = new google.maps.TransitLayer();
       let transitShown = false;
 
-      document
-        .getElementByClassName("transit")
-        .addEventListener("click", () => {
-          !transitShown ? transit.setMap(map) : transit.setMap(null);
-          transitShown = !transitShown;
-        });
+      document.getElementById("transit").addEventListener("click", () => {
+        !transitShown ? transit.setMap(map) : transit.setMap(null);
+        transitShown = !transitShown;
+      });
     } else {
       console.log("error");
       console.log(results, status);
